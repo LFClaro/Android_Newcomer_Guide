@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <include layout="@layout/toolbar" />
+    android:background="@drawable/app_background"
+    tools:context=".MainActivity" >
+    <include layout="@layout/toolbar_menu" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/round_corner_bg"
-        android:layout_margin="30dp"
+        android:layout_margin="40dp"
         android:padding="20dp"
+        android:background="@drawable/round_corner_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

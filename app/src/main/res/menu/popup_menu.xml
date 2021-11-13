@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Community"
+        android:id="@+id/community_menu" />
+    <item
+        android:title="Food"
+        android:id="@+id/food_menu" />
+    <item
+        android:title="Health"
+        android:id="@+id/health_menu" />
+    <item
+        android:title="Housing"
+        android:id="@+id/housing_menu" />
+    <item
+        android:title="Government Services"
+        android:id="@+id/govt_menu" />
+
+</menu>
