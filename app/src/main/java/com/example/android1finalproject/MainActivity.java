@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick (View v) {
                 Toast.makeText(MainActivity.this, "TODO Menu goes here", Toast.LENGTH_SHORT).show();
             }
+
+
         });
     }
 }

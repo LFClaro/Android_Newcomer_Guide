@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
+
         <ImageView
             android:id="@+id/toolbar_menu"
             android:layout_width="wrap_content"
@@ -27,13 +28,14 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             android:text="@string/app_name"/>
+
         <ImageView
             android:id="@+id/toolbar_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_mapleleaf_40"/>
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_mapleleaf_40" />
     </RelativeLayout>
 
 </RelativeLayout>

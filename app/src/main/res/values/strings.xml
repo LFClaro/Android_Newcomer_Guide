@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Newcomer Guide</string>
+    <string name="title_activity_health">HealthActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="HealthLabel">HEALTH</string>
+    <string name="generalInformation">General Information</string>
+    <string name="hospital">Hospital</string>
+    <string name="healthCenter">Health Center</string>
+    <string name="emergency">Emergency</string>
+    <string name="ohip">OHIP</string>
+    <string name="familyDoctor">Family Doctor</string>
+    <string name="mentalHealth">Mental Health</string>
+    <string name="hello_first_fragment">Health care if very important to us, as a newcomer it is
+important that you understand Canada\'s health care system Select the information you wish to learn more about
+</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

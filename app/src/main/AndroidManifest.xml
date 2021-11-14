@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android1FinalProject">
         <activity
+            android:name=".HealthActivity"
+            android:exported="true"
+            android:label="@string/title_activity_health"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
