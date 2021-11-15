@@ -17,30 +17,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/healthSecondTxt"
+        app:layout_constraintBottom_toTopOf="@id/healthSearchTxt"
         app:layout_constraintVertical_bias="0.0" />
     <TextView
-        android:id="@+id/healthSecondTxt"
+        android:id="@+id/healthSearchTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_second_fragment"
-        app:layout_constraintBottom_toTopOf="@id/OHIP"
+        app:layout_constraintBottom_toTopOf="@id/OHIP_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/healthGeneralHeadingLbl" />
 
     <Button
-        android:id="@+id/OHIP"
+        android:id="@+id/OHIP_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
         android:text="@string/ohip"
         app:layout_constraintBottom_toTopOf="@id/familyDoctor_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/healthSecondTxt" />
+        app:layout_constraintTop_toBottomOf="@id/healthSearchTxt" />
 
     <Button
         android:id="@+id/familyDoctor_btn"
@@ -50,7 +50,7 @@
         android:layout_marginEnd="55dp"
         android:text="@string/familyDoctor"
         app:layout_constraintBottom_toTopOf="@id/mentalHealth_btn"
-        app:layout_constraintTop_toBottomOf="@id/OHIP"
+        app:layout_constraintTop_toBottomOf="@id/OHIP_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

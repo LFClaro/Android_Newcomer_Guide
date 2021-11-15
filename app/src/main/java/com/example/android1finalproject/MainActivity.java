@@ -2,6 +2,7 @@ package com.example.android1finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
         toolbar_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
-                Toast.makeText(MainActivity.this, "TODO Menu goes here", Toast.LENGTH_SHORT).show();
+                Intent healthMain = new Intent(MainActivity.this, HealthActivity.class);//Parent aActivity then the healthActivity
+                startActivity(healthMain);
+
+               // Toast.makeText(MainActivity.this, "TODO Menu goes here", Toast.LENGTH_SHORT).show();
             }
 
 

@@ -31,11 +31,22 @@ public class FirstFragment extends Fragment {
 
         //firstButton was there before PUT as REMINDER
         binding.generalBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-            }
+              @Override
+              public void onClick(View view) {
+                  NavHostFragment.findNavController(FirstFragment.this)
+                          .navigate(R.id.action_FirstFragment_to_SecondFragment);
+              }
+          });
+
+
+             binding.hospitalBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    NavHostFragment.findNavController(FirstFragment.this)
+                            .navigate(R.id.action_FirstFragment_to_HospitalFragment);
+                }
+
+
         });
     }
 

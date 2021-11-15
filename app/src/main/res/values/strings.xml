@@ -2,8 +2,8 @@
     <string name="app_name">Newcomer Guide</string>
     <string name="title_activity_health">HealthActivity</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">Health</string>
+    <string name="second_fragment_label">Health-General Info</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="HealthLabel">HEALTH</string>
@@ -17,7 +17,9 @@
     <string name="hello_first_fragment">Health care if very important to us, as a newcomer it is
 important that you understand Canada\'s health care system Select the information you wish to learn more about
 </string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_second_fragment">Welcome to the General Information Page. Health Care is critical and we have selected three sections to provide information on clik button below for more information</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ohip_fragment_label">HEALTH-OHIP</string>
+    <string name="hospital_fragment_label">HospitalFragment</string>
+    <string name="Find">find</string>
 </resources>

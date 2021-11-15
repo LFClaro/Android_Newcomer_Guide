@@ -14,6 +14,10 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_HospitalFragment"
+            app:destination="@id/HospitalFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -23,6 +27,17 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/HospitalFragment"
+        android:name="com.example.android1finalproject.HospitalFragment"
+        android:label="@string/hospital_fragment_label"
+        tools:layout="@layout/fragment_hospital">
+
+
+        <action
+            android:id="@+id/action_HospitalFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

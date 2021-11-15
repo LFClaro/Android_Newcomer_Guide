@@ -4,42 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".ohipFragment">
     <TextView
-        android:id="@+id/healthGeneralHeadingLbl"
+        android:id="@+id/ohiplbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="150dp"
         android:textSize="45sp"
         android:textColor="@color/red_500"
-        android:text="@string/HealthLabel"
+        android:text="@string/ohip_fragment_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/healthSearchTxt"
+        app:layout_constraintBottom_toTopOf="@id/ohipMessagelbl"
         app:layout_constraintVertical_bias="0.0" />
     <TextView
-        android:id="@+id/healthSearchTxt"
+        android:id="@+id/ohipMessagelbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:text="@string/hello_second_fragment"
-        app:layout_constraintBottom_toTopOf="@id/Find"
+        app:layout_constraintBottom_toTopOf="@id/ohipFind"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/healthGeneralHeadingLbl" />
+        app:layout_constraintTop_toBottomOf="@id/ohiplbl" />
 
     <Button
-        android:id="@+id/Find"
+        android:id="@+id/ohipFind"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginEnd="28dp"
         android:text="@string/Find"
-        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/healthSearchTxt" />
+        app:layout_constraintTop_toBottomOf="@id/ohipMessagelbl" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
