@@ -26,8 +26,8 @@
         tools:layout="@layout/fragment_second">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SecondFragment_to_ohipFragment"
+            app:destination="@id/ohipFragment" />
     </fragment>
     <fragment
         android:id="@+id/HospitalFragment"
@@ -38,6 +38,16 @@
 
         <action
             android:id="@+id/action_HospitalFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ohipFragment"
+        android:name="com.example.android1finalproject.ohipFragment"
+        android:label="@string/ohip_fragment_label"
+        tools:layout="@layout/fragment_ohip">
+
+        <action
+            android:id="@+id/action_ohipFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
