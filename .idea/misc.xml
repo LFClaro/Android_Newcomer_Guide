@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/drawable/app_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/govtServices_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/toolbar_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/toolbar_no_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/menu/popup_menu.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.35052083333333334" />
         <entry key="app/src/main/res/drawable/app_background.xml" value="0.346875" />
         <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.42083333333333334" />
