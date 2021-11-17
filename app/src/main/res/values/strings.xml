@@ -7,6 +7,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="HealthLabel">HEALTH</string>
+    <string name="HealthFindHospitalLabel">HEALTH-Find Hospital</string>
     <string name="generalInformation">General Information</string>
     <string name="hospital">Hospital</string>
     <string name="healthCenter">Health Center</string>
@@ -18,8 +19,9 @@
 important that you understand Canada\'s health care system Select the information you wish to learn more about
 </string>
     <string name="hello_second_fragment">Welcome to the General Information Page. Health Care is critical and we have selected three sections to provide information on clik button below for more information</string>
+    <string name="SearchOntarioHospital">Enter to Find Hospital</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="ohip_fragment_label">HEALTH-OHIP</string>
-    <string name="hospital_fragment_label">HospitalFragment</string>
+    <string name="hospital_fragment_label">Hospital</string>
     <string name="Find">find</string>
 </resources>
