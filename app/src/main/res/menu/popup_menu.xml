@@ -15,5 +15,8 @@
     <item
         android:title="Government Services"
         android:id="@+id/govt_menu" />
+    <item
+        android:title="SIGN OUT"
+        android:id="@+id/sign_out" />
 
 </menu>

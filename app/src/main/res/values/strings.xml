@@ -1,3 +1,71 @@
 <resources>
     <string name="app_name">Newcomer Guide</string>
+    <string name="email">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="log_into">Log Into...</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_your_account">Forgot your account?</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="or">or</string>
+    <string name="confirm_password">Confirm Password</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="housing">Housing</string>
+    <string name="community">Community</string>
+    <string name="food">Food</string>
+    <string name="health">Health</string>
+    <string name="government_services">Government Services</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Health</string>
+    <string name="second_fragment_label">Health-General Info</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="HealthLabel">HEALTH</string>
+    <string name="HealthFindHospitalLabel">HEALTH-Find Hospital</string>
+    <string name="generalInformation">General Information</string>
+    <string name="hospital">Hospital</string>
+    <string name="healthCenter">Health Center</string>
+    <string name="emergency">Emergency</string>
+    <string name="ohip">OHIP</string>
+    <string name="familyDoctor">Family Doctor</string>
+    <string name="mentalHealth">Mental Health</string>
+    <string name="hello_first_fragment">Health care if very important to us, as a newcomer it is
+important that you understand Canada\'s health care system Select the information you wish to learn more about
+</string>
+    <string name="hello_second_fragment">Welcome to the General Information Page. Health Care is critical and we have selected three sections to provide information on clik button below for more information</string>
+    <string name="SearchOntarioHospital">Enter to Find Hospital</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ohip_fragment_label">HEALTH-OHIP</string>
+    <string name="hospital_fragment_label">Hospital</string>
+    <string name="Find">find</string>
+
+    <!--
+TODO: Before you run your application, you need a Google Maps API key.
+
+To get one, follow this link, follow the directions and press "Create" at the end:
+
+https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=66:0B:5E:0B:4E:93:F1:45:26:B9:49:3D:26:C1:18:5E:DE:FE:0A:D6%3Bcom.example.android1finalproject.housing
+
+You can also add your credentials to an existing key, using these values:
+
+Package name:
+com.example.android1finalproject.housing
+
+SHA-1 certificate fingerprint:
+66:0B:5E:0B:4E:93:F1:45:26:B9:49:3D:26:C1:18:5E:DE:FE:0A:D6
+
+Alternatively, follow the directions here:
+https://developers.google.com/maps/documentation/android/start#get-key
+
+Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+string in this file.
+-->
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">AIzaSyATNXeTmb9k8UkUmnxNuU-jN_-dx2rZF-Y</string>
 </resources>
