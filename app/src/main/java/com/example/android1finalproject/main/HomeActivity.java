@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android1finalproject.R;
+import com.example.android1finalproject.health.HealthActivity;
 import com.example.android1finalproject.housing.HousingActivity;
 
 public class HomeActivity extends AppCompatActivity {
@@ -47,6 +48,13 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        healthButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                Intent healthMain = new Intent(HomeActivity.this, HealthActivity.class);
+                startActivity(healthMain);
+            }
+        });
     }
 
     private void showMenu(View v){
