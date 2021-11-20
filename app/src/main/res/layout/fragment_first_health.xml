@@ -4,20 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".health.FirstFragment">
+    tools:context=".health.FirstFragmentHealth">
 
     <ImageView
         android:id="@+id/healthImg"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_gravity="top"
         android:src="@drawable/health_banner"
-        app:layout_constraintBottom_toTopOf="@+id/healthHeadingLbl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/healthHeadingLbl"
         android:layout_width="wrap_content"
@@ -85,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hospital_btn"
-         />
+        />
 
     <Button
         android:id="@+id/emergency_btn"

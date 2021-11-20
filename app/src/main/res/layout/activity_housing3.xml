@@ -18,27 +18,27 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_gravity="center"
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="By Price"
             android:textColor="@color/purple_700"
             android:textSize="48sp"
             android:textStyle="bold" />
 
         <EditText
-            android:background="@drawable/rounded_edittext"
-            android:padding="4dp"
             android:id="@+id/input"
             android:layout_width="260dp"
-
             android:layout_height="48dp"
             android:layout_gravity="center"
+
             android:layout_marginTop="42dp"
-            android:paddingStart="16dp"
             android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_edittext"
             android:hint="Price range(100-1000)"
+            android:padding="4dp"
+            android:paddingStart="16dp"
             android:textAllCaps="false"
             tools:ignore="RtlSymmetry" />
 
@@ -47,11 +47,9 @@
             android:layout_width="160dp"
             android:layout_height="52dp"
             android:layout_gravity="center"
-            android:text="Find"
             android:padding="4dp"
+            android:text="Find"
             android:textAllCaps="false" />
-
-
 
 
     </LinearLayout>

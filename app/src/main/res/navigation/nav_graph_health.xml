@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/FirstFragmentHealth">
+
+    <fragment
+        android:id="@+id/FirstFragmentHealth"
+        android:name="com.example.android1finalproject.health.FirstFragmentHealth"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first_health">
+
+        <action
+            android:id="@+id/action_FirstFragmentHealth_to_SecondFragmentHealth"
+            app:destination="@id/SecondFragmentHealth" />
+        <action
+            android:id="@+id/action_FirstFragmentHealth_to_HospitalFragment"
+            app:destination="@id/HospitalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragmentHealth"
+        android:name="com.example.android1finalproject.health.SecondFragmentHealth"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second_health">
+
+    <action
+            android:id="@+id/action_SecondFragmentHealth_to_ohipFragment"
+            app:destination="@id/ohipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/HospitalFragment"
+        android:name="com.example.android1finalproject.health.HospitalFragment"
+        android:label="@string/hospital_fragment_label"
+        tools:layout="@layout/fragment_hospital">
+
+
+        <action
+            android:id="@+id/action_HospitalFragment_to_FirstFragmentHealth"
+            app:destination="@id/FirstFragmentHealth" />
+    </fragment>
+    <fragment
+        android:id="@+id/ohipFragment"
+        android:name="com.example.android1finalproject.health.ohipFragment"
+        android:label="@string/ohip_fragment_label"
+        tools:layout="@layout/fragment_ohip">
+
+        <action
+            android:id="@+id/action_ohipFragment_to_FirstFragmentHealth"
+            app:destination="@id/FirstFragmentHealth" />
+    </fragment>
+</navigation>

@@ -35,7 +35,7 @@ public class HospitalFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(HospitalFragment.this)
-                        .navigate(R.id.action_HospitalFragment_to_FirstFragment);
+                        .navigate(R.id.action_HospitalFragment_to_FirstFragmentHealth);
             }
         });
     }

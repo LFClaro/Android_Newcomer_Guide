@@ -45,6 +45,8 @@ public class LogInActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mAuth.getInstance().useEmulator("10.0.2.2", 9099);
     }
 
     public void logInClicked(View view) {

@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.android1finalproject.R;
-import com.example.android1finalproject.databinding.FragmentFirstBinding;
+import com.example.android1finalproject.databinding.FragmentFirstHealthBinding;
 
-public class FirstFragment extends Fragment {
+public class FirstFragmentHealth extends Fragment {
 
-    private FragmentFirstBinding binding;
+    private FragmentFirstHealthBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +22,7 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragmentFirstHealthBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -32,20 +32,20 @@ public class FirstFragment extends Fragment {
 
         //firstButton was there before PUT as REMINDER
         binding.generalBtn.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View view) {
-                  NavHostFragment.findNavController(FirstFragment.this)
-                          .navigate(R.id.action_FirstFragment_to_SecondFragment);
-              }
-          });
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragmentHealth.this)
+                        .navigate(R.id.action_FirstFragmentHealth_to_SecondFragmentHealth);
+            }
+        });
 
 
-             binding.hospitalBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    NavHostFragment.findNavController(FirstFragment.this)
-                            .navigate(R.id.action_FirstFragment_to_HospitalFragment);
-                }
+        binding.hospitalBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragmentHealth.this)
+                        .navigate(R.id.action_FirstFragmentHealth_to_HospitalFragment);
+            }
 
 
         });

@@ -1,4 +1,4 @@
-package com.example.android1finalproject.health;
+package com.example.android1finalproject.community;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.android1finalproject.R;
-import com.example.android1finalproject.databinding.FragmentSecondBinding;
+import com.example.android1finalproject.databinding.FragmentSecondCommunityBinding;
 
-public class SecondFragment extends Fragment {
+public class SecondFragmentCommunity extends Fragment {
 
-    private FragmentSecondBinding binding;
+    private FragmentSecondCommunityBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +22,7 @@ public class SecondFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentSecondCommunityBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -30,11 +30,11 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.OHIPBtn.setOnClickListener(new View.OnClickListener() {
+        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_ohipFragment);
+                NavHostFragment.findNavController(SecondFragmentCommunity.this)
+                        .navigate(R.id.action_SecondFragmentCommunity_to_FirstFragmentCommunity);
             }
         });
     }

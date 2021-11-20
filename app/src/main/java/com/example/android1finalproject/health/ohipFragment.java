@@ -1,13 +1,14 @@
 package com.example.android1finalproject.health;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.databinding.FragmentOhipBinding;
@@ -16,7 +17,6 @@ import com.example.android1finalproject.databinding.FragmentOhipBinding;
 public class ohipFragment extends Fragment {
 
     private FragmentOhipBinding binding;
-
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -35,7 +35,7 @@ public class ohipFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(ohipFragment.this)
-                        .navigate(R.id.action_ohipFragment_to_FirstFragment);
+                        .navigate(R.id.action_ohipFragment_to_FirstFragmentHealth);
             }
         });
     }
@@ -45,4 +45,5 @@ public class ohipFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }
