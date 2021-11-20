@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android1FinalProject">
         <activity
-            android:name=".community.communityActivity"
+            android:name=".community.CommunityActivity"
             android:exported="true"
             android:label="@string/title_activity_community"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
         <activity
-            android:name=".health.MainHealthActivity"
+            android:name=".health.HealthActivity"
             android:exported="true"
             android:label="@string/title_activity_main_health"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />

@@ -12,9 +12,9 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android1finalproject.health.MainHealthActivity;
+import com.example.android1finalproject.health.HealthActivity;
 import com.example.android1finalproject.R;
-import com.example.android1finalproject.community.communityActivity;
+import com.example.android1finalproject.community.CommunityActivity;
 import com.example.android1finalproject.housing.HousingActivity;
 
 public class HomeActivity extends AppCompatActivity {
@@ -52,7 +52,7 @@ public class HomeActivity extends AppCompatActivity {
         healthButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
-                Intent healthMain = new Intent(HomeActivity.this, MainHealthActivity.class);
+                Intent healthMain = new Intent(HomeActivity.this, HealthActivity.class);
                 startActivity(healthMain);
             }
         });
@@ -60,7 +60,7 @@ public class HomeActivity extends AppCompatActivity {
         communityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
-                Intent communityMain = new Intent(HomeActivity.this, communityActivity.class);
+                Intent communityMain = new Intent(HomeActivity.this, CommunityActivity.class);
                 startActivity(communityMain);
             }
         });
