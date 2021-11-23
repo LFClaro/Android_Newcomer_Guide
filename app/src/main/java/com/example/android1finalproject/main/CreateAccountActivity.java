@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android1finalproject.R;
@@ -18,8 +21,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class CreateAccountActivity extends AppCompatActivity {
-    Button createButton;
-    Button logInButton;
+    TextView emailEditText;
+    EditText passwordEditText, confirmPasswordEditText;
+    Button createButton, logInButton;
 
     private static final String TAG = "EmailPassword";
     // Declare Firebase Auth
@@ -30,11 +34,35 @@ public class CreateAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
+        emailEditText = findViewById(R.id.etEmail);
+        passwordEditText = findViewById(R.id.etPassword);
+        confirmPasswordEditText = findViewById(R.id.etConfirmPassword);
         createButton = findViewById(R.id.btnCreateAccount1);
         logInButton = findViewById(R.id.btnLogIn1);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+        // Initialize Firebase Auth EMULATOR
+        mAuth.getInstance().useEmulator("localhost", 9099);
+
+        createButton.setOnClickListener(new View.OnClickListener() {
+            String email, password, confirmPassword;
+            @Override
+            public void onClick(View view) {
+                email = emailEditText.getText().toString();
+                password = passwordEditText.getText().toString();
+                confirmPassword = confirmPasswordEditText.getText().toString();
+                if (email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                    Toast.makeText(CreateAccountActivity.this, "Please Fill all Fields", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (password.equals(confirmPassword)) {
+                        createAccount(email, password);
+                    } else {
+                        Toast.makeText(CreateAccountActivity.this, "Passwords Must Match", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
 
         logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,9 +104,13 @@ public class CreateAccountActivity extends AppCompatActivity {
                 });
     }
 
-    private void reload() { }
-
     private void updateUI(FirebaseUser user) {
+        Toast.makeText(CreateAccountActivity.this, "Authentication Successful", Toast.LENGTH_SHORT).show();
+        reload();
+    }
 
+    private void reload() {
+        Intent intent = new Intent(CreateAccountActivity.this, HomeActivity.class);
+        startActivity(intent);
     }
 }

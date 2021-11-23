@@ -33,21 +33,30 @@
             android:exported="false" />
         <activity
             android:name=".main.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
         <activity
             android:name=".main.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".main.LogInActivity"
-            android:exported="false" />
-        <activity
-            android:name=".main.CreateAccountActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.CreateAccountActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

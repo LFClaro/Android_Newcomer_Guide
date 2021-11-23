@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,8 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LogInActivity extends AppCompatActivity {
     TextView toolbar_title;
-    Button createButton;
-    Button logInButton;
+    EditText emailEditText, passwordEditText;
+    Button createButton, logInButton;
 
     private static final String TAG = "EmailPassword";
     // Declare Firebase Auth
@@ -35,26 +36,40 @@ public class LogInActivity extends AppCompatActivity {
         toolbar_title = findViewById(R.id.toolbar_title_no_menu);
         toolbar_title.setText("Log In");
 
+        emailEditText = findViewById(R.id.etEmailLogin);
+        passwordEditText = findViewById(R.id.etPasswordLogin);
         createButton = findViewById(R.id.btnCreateAccount2);
         logInButton = findViewById(R.id.btnLogIn2);
 
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
+        // Initialize Firebase Auth EMULATOR
+        mAuth.getInstance().useEmulator("localhost", 9099);
+
         logInButton.setOnClickListener(new View.OnClickListener() {
+            String email, password;
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
-                startActivity(intent);
+                email = emailEditText.getText().toString();
+                password = passwordEditText.getText().toString();
+                if (email.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(LogInActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                } else {
+                    logIn(email, password);
+                }
             }
         });
 
-        mAuth.getInstance().useEmulator("10.0.2.2", 9099);
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LogInActivity.this, CreateAccountActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    public void logInClicked(View view) {
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
-    }
-
-    private void signIn(String email, String password) {
+    private void logIn(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -76,7 +91,12 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser user) {
-
+        Toast.makeText(LogInActivity.this, "Authentication Successful", Toast.LENGTH_SHORT).show();
+        reload();
     }
 
+    private void reload() {
+        Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
 }
