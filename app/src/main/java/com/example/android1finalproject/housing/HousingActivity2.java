@@ -35,17 +35,19 @@ public class HousingActivity2 extends AppCompatActivity {
 //        getSupportActionBar().setTitle("Housing");
 
         Intent intent = getIntent();
-        int index = intent.getIntExtra("index", 0);
-        if (index == 1) {
+        String index = intent.getStringExtra("index");
+        if (index.equals("buy")) {
             titleTV.setText("To Buy");
-            descriptionTV.setText("Documents needed for buy:\n\n 1.Refrences\n 2.Proof of Income\n 3.Govt ID");
+            descriptionTV.setText("Documents needed to buy:\n\n 1.Refrences\n 2.Proof of Income\n 3.Govt ID");
             lawsBtn.setText("Click here for Buying laws");
-        } else if (index == 2) {
+        } else if (index.equals("lease")) {
             titleTV.setText("To Lease");
             descriptionTV.setText("Documents needed for lease:\n\n 1.Refrences\n 2.Proof of Income\n 3.Govt ID");
             lawsBtn.setText("Click here for Lease laws");
         } else {
-            //
+            titleTV.setText("To Rent");
+            descriptionTV.setText("Documents needed for rental:\n\n 1.Refrences\n 2.Proof of Income\n 3.Govt ID");
+            lawsBtn.setText("Click here for Rental laws");
         }
 
         lawsBtn.setOnClickListener(new View.OnClickListener() {

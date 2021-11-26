@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -25,8 +26,15 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.GeoPoint;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class HousingActivity3 extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -38,10 +46,30 @@ public class HousingActivity3 extends AppCompatActivity implements OnMapReadyCal
     ArrayList<Marker> markerArrayList;
     private GoogleMap mMap;
 
+    String searchType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_housing3);
+
+        toolbar_title = findViewById(R.id.toolbar_title);
+        mapView = findViewById(R.id.mapView);
+        titleTV = findViewById(R.id.title_text);
+        findBtn = findViewById(R.id.by_price);
+        inputEt = findViewById(R.id.input);
+        mapView.getMapAsync(this);
+        mapView.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+        searchType = intent.getStringExtra("index");
+        if (searchType.equals("rent")) {
+            toolbar_title.setText("To Rent");
+        } else if (searchType.equals("buy")) {
+            toolbar_title.setText("To Buy");
+        } else {
+            toolbar_title.setText("To Lease");
+        }
 
         houseArrayList = new ArrayList<>();
         markerArrayList = new ArrayList<>();
@@ -51,26 +79,6 @@ public class HousingActivity3 extends AppCompatActivity implements OnMapReadyCal
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setDisplayShowHomeEnabled(true);
 //        getSupportActionBar().setTitle("Housing");
-
-        toolbar_title = findViewById(R.id.toolbar_title);
-        toolbar_title.setText("Laws");
-
-        mapView = findViewById(R.id.mapView);
-        titleTV = findViewById(R.id.title_text);
-        findBtn = findViewById(R.id.by_price);
-        inputEt = findViewById(R.id.input);
-        mapView.getMapAsync(this);
-        mapView.onCreate(savedInstanceState);
-
-        Intent intent = getIntent();
-        /*int index = intent.getIntExtra("index", 0);
-        if (index == 1) {
-            //titleTV.setText("To Buy");
-        } else if (index == 2) {
-            //titleTV.setText("To Lease");
-        } else {
-            //
-        }*/
 
         String type = intent.getStringExtra("type");
         if (type.equals("location")) {
@@ -123,19 +131,38 @@ public class HousingActivity3 extends AppCompatActivity implements OnMapReadyCal
     }
 
     private void dummyData() {
-        houseArrayList.add(new House(43.651070, -79.347015, "Toronto", 1000.0));
-        houseArrayList.add(new House(43.6532, -79.3832, "The PATH - City Hall, Toronto", 2000.0));
-        houseArrayList.add(new House(43.8417, -79.4766, "Pleasant Ridge Ave, Thornhill, ON L4J 0G2", 400.0));
-        houseArrayList.add(new House(44.0849, -79.0920, "Foxfire Chase, Uxbridge, ON L9P 1R4,", 4000.0));
-        houseArrayList.add(new House(44.1046, -79.3942, "East Gwillimbury, ON,", 50.0));
-        houseArrayList.add(new House(43.6619, -79.3748, "Horticultural Ave, Toronto, ON M5A 2P2, Canada", 200.0));
-        houseArrayList.add(new House(43.6425, -79.3872, "Front St W, Toronto, ON M5V 2T6, Canada", 10.0));
-        houseArrayList.add(new House(43.6328, -79.4257, "Dufferin St, Toronto, ON M6K 3C3, Canada", 100.0));
-        houseArrayList.add(new House(43.6845, -79.3649, "Young Welcome Centre, Toronto", 6000.0));
-        houseArrayList.add(new House(43.6559, -79.4104, "Palmerston Ave, Toronto, ON M6G 2P7, Canada", 71000.0));
-        houseArrayList.add(new House(43.6696, -79.4464, "St Clarens Ave, Toronto, ON M6H 3X6, Canada", 11000.0));
-        houseArrayList.add(new House(43.6440, -79.4428, "Sorauren Ave, Toronto, ON M6R 2E5, Canada", 13000.0));
-        houseArrayList.add(new House(43.6423, -79.4030, "Wellington St W Second Floor", 100000.0));
+//        houseArrayList.add(new House(43.651070, -79.347015, "Toronto", 1000.0));
+//        houseArrayList.add(new House(43.6532, -79.3832, "The PATH - City Hall, Toronto", 2000.0));
+//        houseArrayList.add(new House(43.8417, -79.4766, "Pleasant Ridge Ave, Thornhill, ON L4J 0G2", 400.0));
+//        houseArrayList.add(new House(44.0849, -79.0920, "Foxfire Chase, Uxbridge, ON L9P 1R4,", 4000.0));
+//        houseArrayList.add(new House(44.1046, -79.3942, "East Gwillimbury, ON,", 50.0));
+//        houseArrayList.add(new House(43.6619, -79.3748, "Horticultural Ave, Toronto, ON M5A 2P2, Canada", 200.0));
+//        houseArrayList.add(new House(43.6425, -79.3872, "Front St W, Toronto, ON M5V 2T6, Canada", 10.0));
+//        houseArrayList.add(new House(43.6328, -79.4257, "Dufferin St, Toronto, ON M6K 3C3, Canada", 100.0));
+//        houseArrayList.add(new House(43.6845, -79.3649, "Young Welcome Centre, Toronto", 6000.0));
+//        houseArrayList.add(new House(43.6559, -79.4104, "Palmerston Ave, Toronto, ON M6G 2P7, Canada", 71000.0));
+//        houseArrayList.add(new House(43.6696, -79.4464, "St Clarens Ave, Toronto, ON M6H 3X6, Canada", 11000.0));
+//        houseArrayList.add(new House(43.6440, -79.4428, "Sorauren Ave, Toronto, ON M6R 2E5, Canada", 13000.0));
+//        houseArrayList.add(new House(43.6423, -79.4030, "Wellington St W Second Floor", 100000.0));
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("houses")
+                .whereEqualTo("type", searchType)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d("Firestore", document.getId() + " => " + document.getData());
+                                GeoPoint geoPoint = document.getGeoPoint("geopoint");
+                                houseArrayList.add(new House(geoPoint.getLatitude(), geoPoint.getLongitude(), document.getString("name"), document.getDouble("price")));
+                            }
+                            loadMarkers(houseArrayList, true);
+                        } else {
+                            Log.d("Firestore", "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
     }
 
     private void closeKeyboard() {
@@ -149,8 +176,6 @@ public class HousingActivity3 extends AppCompatActivity implements OnMapReadyCal
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
-
-        loadMarkers(houseArrayList, true);
     }
 
     public void loadMarkers(ArrayList<House> houses, boolean isAll) {
@@ -184,7 +209,7 @@ public class HousingActivity3 extends AppCompatActivity implements OnMapReadyCal
                 }
             });
             if (isAll) {
-                if (i == 9) {
+                if (i == houses.size() - 1) {
                     mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12.0f));
                 }
             } else {
