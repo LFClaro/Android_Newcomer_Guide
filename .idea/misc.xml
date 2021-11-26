@@ -3,44 +3,41 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/ic_baseline_fastfood_24.xml" value="0.3765625" />
-        <entry key="app/src/main/res/drawable/ic_baseline_govt_24.xml" value="0.3765625" />
-        <entry key="app/src/main/res/drawable/ic_baseline_health_24.xml" value="0.3765625" />
-        <entry key="app/src/main/res/drawable/ic_baseline_house_24.xml" value="0.3765625" />
-        <entry key="app/src/main/res/drawable/ic_baseline_people_24.xml" value="0.3765625" />
-        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.3765625" />
-        <entry key="app/src/main/res/drawable/ic_baseline_signout_24.xml" value="0.3765625" />
-        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_food_24.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_govt_24.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_health_24.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_house_24.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_key_24.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_people_24.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_signout_24.xml" value="0.3411458333333333" />
         <entry key="app/src/main/res/layout/activity_community.xml" value="0.2740628166160081" />
         <entry key="app/src/main/res/layout/activity_create_account.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.4046875" />
         <entry key="app/src/main/res/layout/activity_housing.xml" value="0.22252747252747251" />
+        <entry key="app/src/main/res/layout/activity_housing2.xml" value="0.2740628166160081" />
+        <entry key="app/src/main/res/layout/activity_housing3.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_laws.xml" value="0.3375" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2839506172839506" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4046875" />
         <entry key="app/src/main/res/layout/activity_main_health.xml" value="0.23822463768115942" />
-        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.2980072463768116" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.1641337386018237" />
         <entry key="app/src/main/res/layout/content_community.xml" value="0.2740628166160081" />
-        <entry key="app/src/main/res/layout/content_main.xml" value="0.20260416666666667" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.4326530612244898" />
         <entry key="app/src/main/res/layout/content_main_health.xml" value="0.22252747252747251" />
-        <entry key="app/src/main/res/layout/fragment_emailpassword.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_community.xml" value="0.37726449275362317" />
+        <entry key="app/src/main/res/layout/fragment_emailpassword.xml" value="0.3596014492753623" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.25675675675675674" />
         <entry key="app/src/main/res/layout/fragment_first2.xml" value="0.2740628166160081" />
         <entry key="app/src/main/res/layout/fragment_first_community.xml" value="0.22252747252747251" />
         <entry key="app/src/main/res/layout/fragment_first_health.xml" value="0.23822463768115942" />
-        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.2980072463768116" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2980072463768116" />
-        <entry key="app/src/main/res/layout/fragment_multi_factor.xml" value="0.14" />
-        <entry key="app/src/main/res/layout/fragment_multi_factor_sign_in.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_ohip.xml" value="0.20260416666666667" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2740628166160081" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.23505434782608695" />
         <entry key="app/src/main/res/layout/fragment_second2.xml" value="0.23505434782608695" />
-        <entry key="app/src/main/res/layout/fragment_second_community.xml" value="0.2980072463768116" />
-        <entry key="app/src/main/res/layout/fragment_second_health.xml" value="0.2980072463768116" />
-        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/toolbar_menu.xml" value="0.10648148148148148" />
-        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.36041666666666666" />
-        <entry key="app/src/main/res/menu/main.xml" value="0.36041666666666666" />
-        <entry key="app/src/main/res/menu/popup_menu.xml" value="0.625" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.453804347826087" />
+        <entry key="app/src/main/res/layout/toolbar_menu.xml" value="0.35714285714285715" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.5635416666666667" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.5635416666666667" />
+        <entry key="app/src/main/res/menu/popup_menu.xml" value="0.5635416666666667" />
       </map>
     </option>
   </component>

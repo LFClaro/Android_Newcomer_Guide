@@ -43,8 +43,6 @@ public class LogInActivity extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-        // Initialize Firebase Auth EMULATOR
-        mAuth.getInstance().useEmulator("localhost", 9099);
 
         logInButton.setOnClickListener(new View.OnClickListener() {
             String email, password;

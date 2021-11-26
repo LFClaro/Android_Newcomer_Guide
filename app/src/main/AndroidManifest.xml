@@ -21,35 +21,36 @@
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
         <activity
             android:name=".housing.HousingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".housing.HousingActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".housing.HousingActivity3"
-            android:exported="false" />
-        <activity
-            android:name=".housing.LawsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".main.MainActivity"
             android:exported="false"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
         <activity
-            android:name=".main.HomeActivity"
-            android:exported="false" />
+            android:name=".housing.HousingActivity2"
+            android:exported="false"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
         <activity
-            android:name=".main.LogInActivity"
+            android:name=".housing.HousingActivity3"
+            android:exported="false"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+        <activity
+            android:name=".housing.LawsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+        <activity
+            android:name=".main.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
-            android:name=".main.CreateAccountActivity"
+            android:name=".main.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+        <activity
+            android:name=".main.LogInActivity"
             android:exported="false"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar">
 <!--            <intent-filter>-->
@@ -57,6 +58,16 @@
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".main.CreateAccountActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

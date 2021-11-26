@@ -42,8 +42,6 @@ public class CreateAccountActivity extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-        // Initialize Firebase Auth EMULATOR
-        mAuth.getInstance().useEmulator("localhost", 9099);
 
         createButton.setOnClickListener(new View.OnClickListener() {
             String email, password, confirmPassword;
