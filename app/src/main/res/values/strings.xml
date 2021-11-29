@@ -1,3 +1,122 @@
 <resources>
     <string name="app_name">Newcomer Guide</string>
+    <string name="log_into">Log Into...</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_your_account">Forgot your account?</string>
+    <string name="create_account">Create account</string>
+    <string name="or">or</string>
+    <string name="confirm_password">Confirm Password</string>
+    <!-- Strings related to login -->
+    <string name="hint_email">E-Mail</string>
+    <string name="hint_password">Password</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="housing">Housing</string>
+    <string name="community">Community</string>
+    <string name="food">Food</string>
+    <string name="health">Health</string>
+    <string name="government_services">Government Services</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Health</string>
+    <string name="second_fragment_label">Health-General Info</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="HealthLabel">HEALTH</string>
+    <string name="HealthFindHospitalLabel">HEALTH-Find Hospital</string>
+    <string name="generalInformation">General Information</string>
+    <string name="hospital">Hospital</string>
+    <string name="healthCenter">Health Center</string>
+    <string name="emergency">Emergency</string>
+    <string name="ohip">OHIP</string>
+    <string name="familyDoctor">Family Doctor</string>
+    <string name="mentalHealth">Mental Health</string>
+    <string name="hello_first_fragment">Health care if very important to us, as a newcomer it is
+important that you understand Canada\'s health care system Select the information you wish to learn more about
+</string>
+    <string name="hello_second_fragment">Welcome to the General Information Page. Health Care is critical and we have selected three sections to provide information on clik button below for more information</string>
+    <string name="SearchOntarioHospital">Enter to Find Hospital</string>
+
+    <string name="auth_failed">Authentication failed</string>
+    <string name="signed_in">Signed In</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="error_sign_in_failed">Sign in failed, see logs for details.</string>
+    <string name="multi_factor_signed_out">You are not signed in. To use this sample, first navigate to the Email/Password example to sign in and then return here to enroll in multi-factor auth.</string>
+
+
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+    <string name="emailpassword_title_text">Email and Password</string>
+
+    <string name="firebase_status_fmt">Firebase UID: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+
+    <string name="firebaseui_status_fmt">Firebase User: %s</string>
+    <string name="firebaseui_title_text">FirebaseUI Auth</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ohip_fragment_label">HEALTH-OHIP</string>
+    <string name="hospital_fragment_label">Hospital</string>
+    <string name="Find">find</string>
+
+    <!--
+TODO: Before you run your application, you need a Google Maps API key.
+
+To get one, follow this link, follow the directions and press "Create" at the end:
+
+https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=66:0B:5E:0B:4E:93:F1:45:26:B9:49:3D:26:C1:18:5E:DE:FE:0A:D6%3Bcom.example.android1finalproject.housing
+
+You can also add your credentials to an existing key, using these values:
+
+Package name:
+com.example.android1finalproject.housing
+
+SHA-1 certificate fingerprint:
+66:0B:5E:0B:4E:93:F1:45:26:B9:49:3D:26:C1:18:5E:DE:FE:0A:D6
+
+Alternatively, follow the directions here:
+https://developers.google.com/maps/documentation/android/start#get-key
+
+Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+string in this file.
+-->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyATNXeTmb9k8UkUmnxNuU-jN_-dx2rZF-Y</string>
+    <string name="title_activity_main_health">MainHealthActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_community">communityActivity</string>
+    
+    <!--Community string-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="community_centers">Community Centers</string>
+    <string name="school_and_libraries">School and Libraries</string>
+    <string name="places_of_interest">Places of Interest</string>
+    <string name="pi_info">It is important to stay social and active during winter. You may find that making an effort to engage with your community will help your mood along with other aspects of your life in Ontario.</string>
+    <string name="community_info">There are many ways to experience arts and culture in your community. Discover public festivals, children\'s programs and more.</string>
+    <string name="cc_read_moreBTN">Find</string>
+    <string name="overview_community">A new life in Canada can be an overwhelming experience. You can participate in community activities to help meet people and settle in better. Learn about hotspot to visit and activities to do.</string>
+    <string name="pi_read_moreBTN">Read More...</string>
+    <string name="school_info">Public libraries are a free and valuable resource for newcomers. Learn about libraries and your adult education options in Canada.</string>
+    <string name="sl_read_moreBTN">Read More...</string>
+    <string name="services">Services</string>
+    <string name="services_info">Find out services such as transportation, religious places of worship, banks etc, that are around you. You have many things to do.</string>
+    <string name="s_read_moreBTN">Read More...</string>
+    <string name="locationBTN">Find Community Centers Around Me</string>
+    <string name="sign_out">Sign Out</string>
 </resources>

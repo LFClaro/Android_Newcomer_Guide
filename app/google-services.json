@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "735544748151",
+    "project_id": "gta-newcomer-guide",
+    "storage_bucket": "gta-newcomer-guide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735544748151:android:99fc39f191858730273e72",
+        "android_client_info": {
+          "package_name": "com.example.android1finalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735544748151-0lbd19gc0l7d5s3oih4te4pp59rkt0j4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaHxxfim1BTgf4cecSZRF66Osw5cRQbGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "735544748151-0lbd19gc0l7d5s3oih4te4pp59rkt0j4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
