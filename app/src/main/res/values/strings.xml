@@ -139,4 +139,18 @@ string in this file.
     <string name="s_read_moreBTN">Read More...</string>
     <string name="locationBTN">Find Community Centers Around Me</string>
     <string name="sign_out">Sign Out</string>
+    <string name="by_country">by Country</string>
+    <string name="by_neighbourhood">by Neighbourhood</string>
+    <string name="farmer_s_market">Farmer\'s Market</string>
+    <string name="grocery_store">Grocery Store</string>
+    <string name="to_rent">To Rent</string>
+    <string name="to_lease">To Lease</string>
+    <string name="sales_coupons"><![CDATA[Sales & Coupons]]></string>
+    <string name="brazilian">Brazilian</string>
+    <string name="bangladeshi">Bangladeshi</string>
+    <string name="chinese">Chinese</string>
+    <string name="indian">Indian</string>
+    <string name="jamaican">Jamaican</string>
+    <string name="japanese">Japanese</string>
+    <string name="russian">Russian</string>
 </resources>
