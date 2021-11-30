@@ -70,7 +70,7 @@ public class FirstFragmentHealth extends Fragment {
         binding.backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
+                Intent intent = new Intent(getActivity(), HomeActivity.class);
                 startActivity(intent);
              //  NavHostFragment.findNavController(FirstFragmentHealth.this)
              //           .navigate(R.id.action_FirstFragmentHealth_to_MainActivity);
