@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/shann/GroupProjectNov28/Android1_Final_Project/app/src/main/res/layout/activity_housing3.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/shann/GroupProjectNov28/Android1_Final_Project/app/src/main/res/layout/fragment_family_doctor.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/shann/GroupProjectNov28/Android1_Final_Project/app/src/main/res/layout/fragment_first_health.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/shann/GroupProjectNov28/Android1_Final_Project/app/src/main/res/layout/fragment_gallery.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/shann/GroupProjectNov28/Android1_Final_Project/app/src/main/res/layout/fragment_home.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/shann/GroupProjectNov28/Android1_Final_Project/app/src/main/res/layout/fragment_hospital.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/shann/GroupProjectNov28/Android1_Final_Project/app/src/main/res/layout/fragment_ohip.xml" value="0.25" />
+        <entry key="..\:/Users/shann/GroupProjectNov28/Android1_Final_Project/app/src/main/res/layout/fragment_second_health.xml" value="0.20572916666666666" />
         <entry key="app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_food_24.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_govt_24.xml" value="0.3536458333333333" />

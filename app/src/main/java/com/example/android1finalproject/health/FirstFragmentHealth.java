@@ -1,5 +1,6 @@
 package com.example.android1finalproject.health;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,9 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.databinding.FragmentFirstHealthBinding;
+import com.example.android1finalproject.housing.HousingActivity;
+import com.example.android1finalproject.main.HomeActivity;
+import com.example.android1finalproject.main.MainActivity;
 
 public class FirstFragmentHealth extends Fragment {
 
@@ -45,6 +49,18 @@ public class FirstFragmentHealth extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragmentHealth.this)
                         .navigate(R.id.action_FirstFragmentHealth_to_HospitalFragment);
+            }
+
+
+        });
+
+        binding.backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+             //  NavHostFragment.findNavController(FirstFragmentHealth.this)
+             //           .navigate(R.id.action_FirstFragmentHealth_to_MainActivity);
             }
 
 

@@ -38,6 +38,14 @@ public class SecondFragmentHealth extends Fragment {
                         .navigate(R.id.action_SecondFragmentHealth_to_ohipFragment);
             }
         });
+
+        binding.familyDoctorBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(SecondFragmentHealth.this)
+                        .navigate(R.id.action_SecondFragmentHealth_to_familydoctorFragment);
+            }
+        });
     }
 
     @Override

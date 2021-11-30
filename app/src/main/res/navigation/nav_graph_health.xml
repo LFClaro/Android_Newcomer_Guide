@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FirstFragmentHealth_to_HospitalFragment"
             app:destination="@id/HospitalFragment" />
+        <action
+            android:id="@+id/action_FirstFragmentHealth_to_MainActivity"
+            />
     </fragment>
     <fragment
         android:id="@+id/SecondFragmentHealth"
@@ -27,6 +30,9 @@
     <action
             android:id="@+id/action_SecondFragmentHealth_to_ohipFragment"
             app:destination="@id/ohipFragment" />
+        <action
+            android:id="@+id/action_SecondFragmentHealth_to_familydoctorFragment"
+            app:destination="@id/familydoctorFragment" />
     </fragment>
     <fragment
         android:id="@+id/HospitalFragment"
@@ -44,6 +50,16 @@
         android:name="com.example.android1finalproject.health.ohipFragment"
         android:label="@string/ohip_fragment_label"
         tools:layout="@layout/fragment_ohip">
+
+        <action
+            android:id="@+id/action_ohipFragment_to_FirstFragmentHealth"
+            app:destination="@id/FirstFragmentHealth" />
+    </fragment>
+    <fragment
+        android:id="@+id/familydoctorFragment"
+        android:name="com.example.android1finalproject.health.familydoctorFragment"
+        android:label="@string/familydoctor_fragment_label"
+        tools:layout="@layout/fragment_family_doctor">
 
         <action
             android:id="@+id/action_ohipFragment_to_FirstFragmentHealth"
