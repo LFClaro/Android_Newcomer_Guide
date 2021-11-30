@@ -60,8 +60,9 @@ public class HealthMapsFragment extends Fragment {
     private void placesApiRequest(GoogleMap googleMap) {
         //Places API key
         String apiKey = getResources().getString(R.string.google_maps_key_for_requests);;
+        String searchType = "hospital";
         //Prepare request urls with required parameters
-        String nearbyUrl="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.64253900503797,-79.38720700569782&radius=1500000&type=hospital&sensor=true&key=" + apiKey;
+        String nearbyUrl="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.64253900503797,-79.38720700569782&radius=1500000&type=" + searchType + "&sensor=true&key=" + apiKey;
 
         // Request JSON data from the provided URL and display reposnse
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, nearbyUrl, null, new Response.Listener<JSONObject>() {
