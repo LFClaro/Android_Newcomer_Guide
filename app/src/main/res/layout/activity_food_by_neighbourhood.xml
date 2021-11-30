@@ -22,9 +22,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="By Price"
+            android:text="@string/by_neighbourhood"
             android:textColor="@color/red_500"
-            android:textSize="48sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <EditText
@@ -36,7 +36,7 @@
             android:layout_marginTop="42dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Price range(100-1000)"
+            android:hint="Please enter Neighbourhood"
             android:padding="4dp"
             android:paddingStart="16dp"
             android:textAllCaps="false"

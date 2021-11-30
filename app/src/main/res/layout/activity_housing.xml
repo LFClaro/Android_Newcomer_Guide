@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:srcCompat="@drawable/housing" />
+        app:srcCompat="@drawable/housing_banner" />
 
     <TextView
         android:id="@+id/textView"
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="To Rent"
+            android:text="@string/to_rent"
             android:textSize="24sp"
             android:padding="16dp"
             android:textAllCaps="false" />
@@ -72,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="To Lease"
+            android:text="@string/to_lease"
             android:textSize="24sp"
             android:padding="16dp"
             android:textAllCaps="false" />

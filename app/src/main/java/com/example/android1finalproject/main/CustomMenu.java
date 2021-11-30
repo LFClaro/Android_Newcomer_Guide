@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.community.CommunityActivity;
+import com.example.android1finalproject.food.FoodActivity;
 import com.example.android1finalproject.health.HealthActivity;
 import com.example.android1finalproject.housing.HousingActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -53,8 +54,10 @@ public class CustomMenu {
                     Intent intent = new Intent(a, CommunityActivity.class);
                     a.startActivity(intent);
                 }
-                if(menuItem.getItemId() == R.id.nav_food)
-                    Toast.makeText(a, "TODO Food Menu goes here", Toast.LENGTH_SHORT).show();
+                if(menuItem.getItemId() == R.id.nav_food){
+                    Intent intent = new Intent(a, FoodActivity.class);
+                    a.startActivity(intent);
+                }
                 if(menuItem.getItemId() == R.id.nav_health){
                     Intent intent = new Intent(a, HealthActivity.class);
                     a.startActivity(intent);
