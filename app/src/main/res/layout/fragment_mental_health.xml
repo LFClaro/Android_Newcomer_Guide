@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".health.familydoctorFragment">
+    <ImageView
+        android:id="@+id/mentalHealthImg"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:src="@drawable/mentalhealthpict"
+        android:padding="0dp"
+        app:layout_constraintBottom_toTopOf="@id/mentalhealthlbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mentalhealthlbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mentalhealth_fragment_label"
+        android:textColor="@color/red_500"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@id/mentalhealthmessagelbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mentalHealthImg"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/mentalhealthmessagelbl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/hello_mental_health_fragment"
+        app:layout_constraintBottom_toTopOf="@id/familydoctorback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mentalhealthlbl" />
+
+    <Button
+        android:id="@+id/familydoctorback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:text="@string/BackHealthMain"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mentalhealthmessagelbl" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,6 +33,10 @@
         <action
             android:id="@+id/action_SecondFragmentHealth_to_familydoctorFragment"
             app:destination="@id/familydoctorFragment" />
+
+        <action
+            android:id="@+id/action_SecondFragmentHealth_to_MentalHealthFragment"
+            app:destination="@id/MentalHealthFragment" />
     </fragment>
     <fragment
         android:id="@+id/HospitalFragment"
@@ -63,6 +67,17 @@
 
         <action
             android:id="@+id/action_ohipFragment_to_FirstFragmentHealth"
+            app:destination="@id/FirstFragmentHealth" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/MentalHealthFragment"
+        android:name="com.example.android1finalproject.health.MentalHealthFragment"
+        android:label="@string/mentalhealth_fragment_label"
+        tools:layout="@layout/fragment_mental_health">
+
+        <action
+            android:id="@+id/action_MentalHealthFragment_to_FirstFragmentHealth"
             app:destination="@id/FirstFragmentHealth" />
     </fragment>
 </navigation>
