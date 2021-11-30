@@ -43,6 +43,7 @@ public class FirstFragmentHealth extends Fragment {
             }
         });
 
+        //Activity for hospital button
 
         binding.hospitalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +54,19 @@ public class FirstFragmentHealth extends Fragment {
 
 
         });
+        //Activity for maps button
 
+        binding.healthCentreBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragmentHealth.this)
+                        .navigate(R.id.action_FirstFragmentHealth_to_HealthMapsFragment);
+            }
+
+
+        });
+
+        //button to go back to main page
         binding.backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

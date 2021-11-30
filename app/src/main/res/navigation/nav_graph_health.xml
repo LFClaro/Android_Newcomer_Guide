@@ -18,6 +18,9 @@
             android:id="@+id/action_FirstFragmentHealth_to_HospitalFragment"
             app:destination="@id/HospitalFragment" />
         <action
+            android:id="@+id/action_FirstFragmentHealth_to_HealthMapsFragment"
+            app:destination="@id/HealthMapsFragment" />
+        <action
             android:id="@+id/action_FirstFragmentHealth_to_MainActivity"
             />
     </fragment>
@@ -78,6 +81,16 @@
 
         <action
             android:id="@+id/action_MentalHealthFragment_to_FirstFragmentHealth"
+            app:destination="@id/FirstFragmentHealth" />
+    </fragment>
+    <fragment
+        android:id="@+id/HealthMapsFragment"
+        android:name="com.example.android1finalproject.health.HealthMapsFragment"
+        android:label="@string/healthmaps_fragment_label"
+        tools:layout="@layout/fragment_health_maps">
+
+        <action
+            android:id="@+id/action_HealthMapsFragment_to_FirstFragmentHealth"
             app:destination="@id/FirstFragmentHealth" />
     </fragment>
 </navigation>

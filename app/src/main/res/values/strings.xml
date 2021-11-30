@@ -87,6 +87,7 @@ Important note: You can apply as soon as you have the documents that you need. H
     <string name="ohip_fragment_label">HEALTH-OHIP</string>
     <string name="familydoctor_fragment_label">Family Doctor</string>
     <string name="mentalhealth_fragment_label">Mental Health</string>
+    <string name="healthmaps_fragment_label">Hospital-Health Center</string>
     <string name="hospital_fragment_label">Hospital</string>
     <string name="Find">find</string>
     <string name="Back">back</string>
