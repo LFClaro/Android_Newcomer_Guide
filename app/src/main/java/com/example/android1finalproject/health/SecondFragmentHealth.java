@@ -38,6 +38,24 @@ public class SecondFragmentHealth extends Fragment {
                         .navigate(R.id.action_SecondFragmentHealth_to_ohipFragment);
             }
         });
+
+
+        //Action for Family Doctor button
+        binding.familyDoctorBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(SecondFragmentHealth.this)
+                        .navigate(R.id.action_SecondFragmentHealth_to_familydoctorFragment);
+            }
+        });
+        //Action for mental Health Buttton
+        binding.mentalHealthBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(SecondFragmentHealth.this)
+                        .navigate(R.id.action_SecondFragmentHealth_to_MentalHealthFragment);
+            }
+        });
     }
 
     @Override

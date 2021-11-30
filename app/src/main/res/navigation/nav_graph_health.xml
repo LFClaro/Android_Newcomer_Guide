@@ -17,6 +17,12 @@
         <action
             android:id="@+id/action_FirstFragmentHealth_to_HospitalFragment"
             app:destination="@id/HospitalFragment" />
+        <action
+            android:id="@+id/action_FirstFragmentHealth_to_HealthMapsFragment"
+            app:destination="@id/HealthMapsFragment" />
+        <action
+            android:id="@+id/action_FirstFragmentHealth_to_MainActivity"
+            />
     </fragment>
     <fragment
         android:id="@+id/SecondFragmentHealth"
@@ -27,6 +33,13 @@
     <action
             android:id="@+id/action_SecondFragmentHealth_to_ohipFragment"
             app:destination="@id/ohipFragment" />
+        <action
+            android:id="@+id/action_SecondFragmentHealth_to_familydoctorFragment"
+            app:destination="@id/familydoctorFragment" />
+
+        <action
+            android:id="@+id/action_SecondFragmentHealth_to_MentalHealthFragment"
+            app:destination="@id/MentalHealthFragment" />
     </fragment>
     <fragment
         android:id="@+id/HospitalFragment"
@@ -47,6 +60,37 @@
 
         <action
             android:id="@+id/action_ohipFragment_to_FirstFragmentHealth"
+            app:destination="@id/FirstFragmentHealth" />
+    </fragment>
+    <fragment
+        android:id="@+id/familydoctorFragment"
+        android:name="com.example.android1finalproject.health.familydoctorFragment"
+        android:label="@string/familydoctor_fragment_label"
+        tools:layout="@layout/fragment_family_doctor">
+
+        <action
+            android:id="@+id/action_ohipFragment_to_FirstFragmentHealth"
+            app:destination="@id/FirstFragmentHealth" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/MentalHealthFragment"
+        android:name="com.example.android1finalproject.health.MentalHealthFragment"
+        android:label="@string/mentalhealth_fragment_label"
+        tools:layout="@layout/fragment_mental_health">
+
+        <action
+            android:id="@+id/action_MentalHealthFragment_to_FirstFragmentHealth"
+            app:destination="@id/FirstFragmentHealth" />
+    </fragment>
+    <fragment
+        android:id="@+id/HealthMapsFragment"
+        android:name="com.example.android1finalproject.health.HealthMapsFragment"
+        android:label="@string/healthmaps_fragment_label"
+        tools:layout="@layout/fragment_health_maps">
+
+        <action
+            android:id="@+id/action_HealthMapsFragment_to_FirstFragmentHealth"
             app:destination="@id/FirstFragmentHealth" />
     </fragment>
 </navigation>

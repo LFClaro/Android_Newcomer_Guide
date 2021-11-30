@@ -49,7 +49,22 @@
     <string name="hello_first_fragment">Health care if very important to us, as a newcomer it is
 important that you understand Canada\'s health care system Select the information you wish to learn more about
 </string>
-    <string name="hello_second_fragment">Welcome to the General Information Page. Health Care is critical and we have selected three sections to provide information on clik button below for more information</string>
+    <string name="hello_second_fragment">Welcome to the General Information Page. Health Care is critical and we have selected three sections to
+        provide information on click button below for more information</string>
+    <string name="hello_mental_health_fragment"> Mental health is about your overall emotional wellbeing; everyone has mental health. Just like physical health you need to take care of yourself to keep a healthy mind.
+
+Your mental health allows you to feel, think, act and cope with life. <a href="https://settlement.org/ontario/health/#MHA">Click Me</a></string>
+    <string name="hello_family_doctor_fragment"> A family doctor is also called a general practitioner (GP). Family doctors are
+      usually the first doctors to diagnose and treat most medical problems. If you need to see a specialist doctor, usually, you need a
+      family doctor to refer you. Family doctors also order laboratory and other tests. <a href="https://settlement.org/ontario/health/#FDOC">Click Me</a></string>
+    <string name="hello_ohip_fragment">Get an application form online or from your local Service Ontario location.
+Fill it out.
+Collect the documents you need.
+Take your application and documents to your local ServiceOntario location.
+Important note: You can apply as soon as you have the documents that you need. However, you will not get a Health Card until you are eligible - after the 3-month waiting period.
+
+    for more information <a href="https://settlement.org/ontario/health/#OHIP">Click Me</a></string>
+
     <string name="SearchOntarioHospital">Enter to Find Hospital</string>
 
     <string name="auth_failed">Authentication failed</string>
@@ -70,8 +85,13 @@ important that you understand Canada\'s health care system Select the informatio
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="ohip_fragment_label">HEALTH-OHIP</string>
+    <string name="familydoctor_fragment_label">Family Doctor</string>
+    <string name="mentalhealth_fragment_label">Mental Health</string>
+    <string name="healthmaps_fragment_label">Hospital-Health Center</string>
     <string name="hospital_fragment_label">Hospital</string>
     <string name="Find">find</string>
+    <string name="Back">back</string>
+    <string name="BackHealthMain">back to Health Main</string>
 
     <!--
 TODO: Before you run your application, you need a Google Maps API key.
@@ -99,7 +119,7 @@ string in this file.
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_community">communityActivity</string>
-    
+
     <!--Community string-->
 
     <!-- TODO: Remove or change this placeholder text -->

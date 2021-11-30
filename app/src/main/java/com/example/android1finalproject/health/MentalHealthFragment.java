@@ -1,5 +1,6 @@
 package com.example.android1finalproject.health;
 
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,32 +14,30 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.android1finalproject.R;
+import com.example.android1finalproject.databinding.FragmentMentalHealthBinding;
 import com.example.android1finalproject.databinding.FragmentOhipBinding;
-
-
-public class ohipFragment extends Fragment {
-
-    private FragmentOhipBinding binding;
+public class MentalHealthFragment extends Fragment {
+    private FragmentMentalHealthBinding binding;
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentOhipBinding.inflate(inflater, container, false);
+        binding = FragmentMentalHealthBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView t = (TextView) view.findViewById(R.id.ohipMessagelbl);
+        TextView t = (TextView) view.findViewById(R.id.mentalhealthmessagelbl);
         t.setMovementMethod(LinkMovementMethod.getInstance());
-        binding.ohipFind.setOnClickListener(new View.OnClickListener() {
+        binding.familydoctorback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(ohipFragment.this)
-                        .navigate(R.id.action_ohipFragment_to_FirstFragmentHealth);
+                NavHostFragment.findNavController(MentalHealthFragment.this)
+                        .navigate(R.id.action_MentalHealthFragment_to_FirstFragmentHealth);
             }
         });
     }
