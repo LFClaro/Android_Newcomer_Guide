@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".community.SecondFragmentCommunity">
+    tools:context=".community.community_placeofinterestFragment">
 
     <include
         android:id="@+id/cmtoolbar"
@@ -37,7 +37,7 @@
             tools:ignore="RtlSymmetry" />
 
         <Button
-            android:id="@+id/schoolBTN"
+            android:id="@+id/button_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"

@@ -140,6 +140,7 @@ string in this file.
     <string name="services_info">Find out services such as transportation, religious places of worship, banks etc, that are around you. You have many things to do.</string>
     <string name="s_read_moreBTN">Read More...</string>
     <string name="locationBTN">Find Community Centers Around Me</string>
+    <string name="community_toolbar">Community</string>
     <string name="sign_out">Sign Out</string>
     <string name="by_country">by Country</string>
     <string name="by_neighbourhood">by Neighbourhood</string>

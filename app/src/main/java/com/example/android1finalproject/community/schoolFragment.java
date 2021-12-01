@@ -1,20 +1,22 @@
 package com.example.android1finalproject.community;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import com.example.android1finalproject.R;
-import com.example.android1finalproject.databinding.FragmentSecondCommunityBinding;
+import com.example.android1finalproject.databinding.FragmentSchoolBinding;
 
-public class SecondFragmentCommunity extends Fragment {
 
-    private FragmentSecondCommunityBinding binding;
+public class schoolFragment extends Fragment {
+
+    private FragmentSchoolBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +24,7 @@ public class SecondFragmentCommunity extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondCommunityBinding.inflate(inflater, container, false);
+        binding = FragmentSchoolBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -33,8 +35,8 @@ public class SecondFragmentCommunity extends Fragment {
         binding.schoolBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragmentCommunity.this)
-                        .navigate(R.id.action_SecondFragmentCommunity_to_FirstFragmentCommunity);
+                NavHostFragment.findNavController(schoolFragment.this)
+                        .navigate(R.id.action_SecondFragmentCommunity_to_schoolFragment);
             }
         });
     }
