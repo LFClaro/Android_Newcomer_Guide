@@ -60,4 +60,5 @@ dependencies {
 
     //Implementing Google Maps API
     implementation 'com.google.android.gms:play-services-maps:18.0.0'
+
 }

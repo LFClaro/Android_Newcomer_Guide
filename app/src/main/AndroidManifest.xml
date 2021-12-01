@@ -11,7 +11,12 @@
         android:theme="@style/Theme.Android1FinalProject">
 
         <activity
-            android:name="com.example.android1finalproject.GovtServicesActivity"
+            android:name="com.example.android1finalproject.govtServices.GovtServicesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar"
+            />
+        <activity
+            android:name="com.example.android1finalproject.govtServices.TransitionActivity"
             android:exported="true"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar"
             />

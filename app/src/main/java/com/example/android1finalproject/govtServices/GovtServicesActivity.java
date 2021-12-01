@@ -1,4 +1,4 @@
-package com.example.android1finalproject;
+package com.example.android1finalproject.govtServices;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +12,22 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.android1finalproject.R;
+import com.example.android1finalproject.housing.HousingActivity;
+import com.example.android1finalproject.main.CustomMenu;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class GovtServicesActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    private CustomMenu customMenu;
+    private String service;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_govtServices);
+        setContentView(R.layout.activity_govtservices);
+
+        mAuth = FirebaseAuth.getInstance();
+        customMenu = new CustomMenu();
 
         ImageView toolbar_menu = findViewById(R.id.toolbar_menu);
         ImageView toolbar_logo = findViewById(R.id.toolbar_logo);
@@ -29,9 +40,17 @@ public class GovtServicesActivity extends AppCompatActivity {
         Button vehicle_registration = findViewById(R.id.vehicle_registration_btn);
         Button furniture_rental = findViewById(R.id.furniture_rental_btn);
 
+        toolbar_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                customMenu.showMenu(GovtServicesActivity.this, v, mAuth);
+            }
+        });
+
         healthCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                service = "healthCard";
                 transition(v);
             }
         });
@@ -39,6 +58,7 @@ public class GovtServicesActivity extends AppCompatActivity {
         SIN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                service = "SIN";
                 transition(v);
             }
         });
@@ -46,6 +66,7 @@ public class GovtServicesActivity extends AppCompatActivity {
         photo_ID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                 service = "photo_ID";
                 transition(v);
             }
         });
@@ -53,6 +74,7 @@ public class GovtServicesActivity extends AppCompatActivity {
         license.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                service = "license";
                 transition(v);
             }
         });
@@ -60,6 +82,7 @@ public class GovtServicesActivity extends AppCompatActivity {
         vehicle_registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                service = "vehicle_registration";
                 transition(v);
             }
         });
@@ -67,19 +90,20 @@ public class GovtServicesActivity extends AppCompatActivity {
         furniture_rental.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                service = "furniture_rental";
                 transition(v);
             }
         });
 
-        toolbar_menu.setOnClickListener(new View.OnClickListener() {
+       /* toolbar_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
                 showMenu(v);
             }
-        });
+        });*/
     }
 
-    private void showMenu(View v){
+   /* private void showMenu(View v){
         PopupMenu popupMenu = new PopupMenu(GovtServicesActivity.this, v);
         popupMenu.getMenuInflater().inflate(R.menu.popup_menu,popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -99,12 +123,12 @@ public class GovtServicesActivity extends AppCompatActivity {
             }
         });
 
-        popupMenu.show();
-    }
+        popupMenu.show();*/
+   // }
 
     private void transition(View v) {
-        Intent intent = new Intent(this, TransitionActivity.class);
-     //   intent.putExtra("student", student);
+        Intent intent = new Intent(GovtServicesActivity.this, TransitionActivity.class);
+        intent.putExtra("service", service);
         startActivity(intent);
     }
 }

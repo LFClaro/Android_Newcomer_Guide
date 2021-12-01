@@ -3,12 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_community.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_govtServices.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_govtservices.xml" value="0.16" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_govtservices_listview.xml" value="0.15572916666666667" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_govtservices_map.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_health.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_health_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_home.xml" value="0.12864583333333332" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_housing.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_housing2.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_housing3.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_laws.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_login.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_main_health.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_map.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/activity_transition.xml" value="0.2" />
         <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/content_health.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/content_main.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/content_main_health.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/fragment_first.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/govtServices_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/priya/OneDrive/Desktop/Humber-Sem3/Android Application Development 1/Android_1_Project/Android1_Final_Project/app/src/main/res/layout/layout2.xml" value="0.1125" />
@@ -31,7 +45,6 @@
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.25" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3707692307692308" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21770833333333334" />
-
       </map>
     </option>
   </component>
