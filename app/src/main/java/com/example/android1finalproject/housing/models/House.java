@@ -1,36 +1,26 @@
 package com.example.android1finalproject.housing.models;
 
+import com.google.firebase.firestore.GeoPoint;
+
 public class House {
-    double latitude;
-    double longitude;
+    GeoPoint geoPoint;
     String name;
     double price;
+    String type;
 
     public House() {
     }
 
-    public House(double latitude, double longitude, String name, double price) {
-        this.latitude = latitude;
-        this.longitude = longitude;
+    public House(GeoPoint geoPoint, String name, double price, String type) {
+        this.geoPoint = geoPoint;
         this.name = name;
         this.price = price;
+        this.type = type;
     }
 
-    public double getLatitude() {
-        return latitude;
-    }
+    public GeoPoint getGeoPoint() { return geoPoint; }
 
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
+    public void setGeoPoint(GeoPoint geoPoint) { this.geoPoint = geoPoint; }
 
     public String getName() {
         return name;
@@ -47,4 +37,8 @@ public class House {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public String getType() { return type; }
+
+    public void setType(String type) { this.type = type; }
 }

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android1finalproject">
 
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -13,6 +14,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Android1FinalProject">
+
+        <activity
+            android:name="com.example.android1finalproject.govtServices.GovtServicesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar"
+            />
+        <activity
+            android:name="com.example.android1finalproject.govtServices.TransitionActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar"
+            />
         <activity
             android:name=".food.ByNeighbourhoodActivity"
             android:exported="true"
@@ -25,6 +37,7 @@
             android:name=".food.FoodActivity"
             android:exported="true"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+>>>>>>> main
         <activity
             android:name=".community.CommunityActivity"
             android:exported="true"
@@ -52,17 +65,6 @@
             android:exported="false"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
         <activity
-            android:name=".main.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Android1FinalProject.NoActionBar">
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity
             android:name=".main.HomeActivity"
             android:exported="false"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
@@ -70,12 +72,6 @@
             android:name=".main.LogInActivity"
             android:exported="false"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar">
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".main.CreateAccountActivity"

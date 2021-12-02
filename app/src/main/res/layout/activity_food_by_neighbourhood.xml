@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_background"
-    tools:context=".housing.HousingActivity3">
+    tools:context=".food.ByNeighbourhoodActivity">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar_menu" />

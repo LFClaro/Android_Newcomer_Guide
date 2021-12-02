@@ -2,25 +2,22 @@ package com.example.android1finalproject.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android1finalproject.govtServices.GovtServicesActivity;
 import com.example.android1finalproject.food.FoodActivity;
 import com.example.android1finalproject.health.HealthActivity;
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.community.CommunityActivity;
 import com.example.android1finalproject.housing.HousingActivity;
+import com.example.android1finalproject.main.custom.CustomMenu;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class HomeActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -87,7 +84,8 @@ public class HomeActivity extends AppCompatActivity {
         govtButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(HomeActivity.this, "TODO Government Menu goes here", Toast.LENGTH_SHORT).show();
+                Intent govtServicesMain = new Intent(HomeActivity.this, GovtServicesActivity.class );
+                startActivity(govtServicesMain);
             }
         });
     }

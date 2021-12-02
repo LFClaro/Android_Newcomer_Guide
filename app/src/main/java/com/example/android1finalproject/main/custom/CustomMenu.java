@@ -1,4 +1,4 @@
-package com.example.android1finalproject.main;
+package com.example.android1finalproject.main.custom;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,8 +11,10 @@ import android.widget.Toast;
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.community.CommunityActivity;
 import com.example.android1finalproject.food.FoodActivity;
+import com.example.android1finalproject.govtServices.GovtServicesActivity;
 import com.example.android1finalproject.health.HealthActivity;
 import com.example.android1finalproject.housing.HousingActivity;
+import com.example.android1finalproject.main.Login;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -66,8 +68,10 @@ public class CustomMenu {
                     Intent intent = new Intent(a, HousingActivity.class);
                     a.startActivity(intent);
                 }
-                if(menuItem.getItemId() == R.id.nav_govt)
-                    Toast.makeText(a, "TODO Government Menu goes here", Toast.LENGTH_SHORT).show();
+                if(menuItem.getItemId() == R.id.nav_govt){
+                    Intent intent = new Intent(a, GovtServicesActivity.class);
+                    a.startActivity(intent);
+                }
                 if(menuItem.getItemId() == R.id.nav_sign_out)
                     login.signOut(a, mAuth);
                 return true;

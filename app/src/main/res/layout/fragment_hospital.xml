@@ -5,27 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".health.HospitalFragment">
+    <ImageView
+        android:id="@+id/healthHospitalImg"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_gravity="top"
+        android:src="@drawable/health_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/healthGeneralHeadingLbl"/>
     <TextView
         android:id="@+id/healthGeneralHeadingLbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="150dp"
-        android:textSize="35sp"
+        android:layout_marginTop="0dp"
+        android:textSize="30sp"
         android:textColor="@color/red_500"
         android:text="@string/HealthFindHospitalLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/healthHospitalImg"
         app:layout_constraintBottom_toTopOf="@id/healthSearchTxt"
         app:layout_constraintVertical_bias="0.0" />
-    <TextView
+    <EditText
         android:id="@+id/healthSearchTxt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
+        android:layout_marginBottom="30dp"
         android:gravity="center"
-        android:text="@string/SearchOntarioHospital"
+
         app:layout_constraintBottom_toTopOf="@id/Find"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,10 +49,26 @@
         android:layout_marginStart="28dp"
         android:layout_marginEnd="28dp"
         android:text="@string/Find"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/healthdisplayTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/healthSearchTxt" />
+    <TextView
+        android:id="@+id/healthdisplayTxt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+
+        android:padding="20dp"
+
+        android:text=" "
+        app:layout_constraintTop_toBottomOf="@id/Find"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
