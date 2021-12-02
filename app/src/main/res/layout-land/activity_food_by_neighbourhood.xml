@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".food.ByNeighbourhoodActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_menu" />
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/by_neighbourhood"
+            android:textColor="@color/red_500"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="260dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Please enter Neighbourhood"
+            android:padding="4dp"
+            android:paddingStart="16dp"
+            android:textAllCaps="false"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/by_price"
+            android:layout_width="160dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:text="Find"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/lay"
+        android:layout_alignTop="@id/lay"
+        android:layout_margin="12dp"/>
+
+
+</RelativeLayout>

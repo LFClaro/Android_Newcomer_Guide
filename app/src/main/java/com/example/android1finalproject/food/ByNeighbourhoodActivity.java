@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.text.SpannableString;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +19,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.housing.models.House;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -26,14 +33,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.GeoPoint;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ByNeighbourhoodActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -41,16 +47,23 @@ public class ByNeighbourhoodActivity extends AppCompatActivity implements OnMapR
     TextView titleTV, toolbar_title;
     Button findBtn;
     EditText inputEt;
-    ArrayList<House> houseArrayList;
-    ArrayList<Marker> markerArrayList;
     private GoogleMap mMap;
 
-    String searchType;
+    //Initializing Array of Markers for reference
+    ArrayList<Marker> markerArrayList = new ArrayList<>();
+    //Initializing API key and setting search type
+    String apiKey = "";
+    String searchType = "restaurant";
+    //Prepare request urls with required parameters
+    String nearbyUrl="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.64253900503797,-79.38720700569782&radius=1500000&type=" + searchType + "&sensor=true&key=" + apiKey;
+    String detailsUrl="https://maps.googleapis.com/maps/api/place/details/json?place_id=";
+    // Initialize details for second API request
+    String setDetails = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_housing3);
+        setContentView(R.layout.activity_food_by_neighbourhood);
 
         toolbar_title = findViewById(R.id.toolbar_title);
         mapView = findViewById(R.id.mapView);
@@ -60,108 +73,125 @@ public class ByNeighbourhoodActivity extends AppCompatActivity implements OnMapR
         mapView.getMapAsync(this);
         mapView.onCreate(savedInstanceState);
 
-        Intent intent = getIntent();
-        searchType = intent.getStringExtra("index");
-        if (searchType.equals("rent")) {
-            toolbar_title.setText("To Rent");
-        } else if (searchType.equals("buy")) {
-            toolbar_title.setText("To Buy");
-        } else {
-            toolbar_title.setText("To Lease");
-        }
-
-        houseArrayList = new ArrayList<>();
-        markerArrayList = new ArrayList<>();
-
-        dummyData();
-
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setTitle("Housing");
-
-        String type = intent.getStringExtra("type");
-        if (type.equals("location")) {
-            titleTV.setText("By Location");
-            inputEt.setHint("Enter Location");
-        }
-
         findBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (inputEt.getText().toString().isEmpty()) {
                     inputEt.setError("Required");
                 }
-
                 String inputString = inputEt.getText().toString().trim();
-
-                if (type.equals("location")) {
-                    ArrayList<House> tempList = new ArrayList<>();
-                    for (House house :
-                            houseArrayList) {
-                        if (house.getName().trim().toLowerCase().contains(inputString.toLowerCase())) {
-                            tempList.add(house);
-                        }
-                    }
-                    loadMarkers(tempList, false);
-                    closeKeyboard();
-
-                } else {
-
-                    if (inputString.contains("-")) {
-
-                        String[] parts = inputString.split("-");
-                        double part1 = Double.parseDouble(parts[0]); // 004
-                        double part2 = Double.parseDouble(parts[1]);
-                        ArrayList<House> tempList = new ArrayList<>();
-                        for (House house :
-                                houseArrayList) {
-                            if (house.getPrice() >= part1 && house.getPrice() <= part2) {
-                                tempList.add(house);
-                            }
-                        }
-                        loadMarkers(tempList, false);
-                        closeKeyboard();
-                    } else {
-                        inputEt.setError("Invalid Price Range(i.e 100-500)");
-                    }
-                }
             }
         });
     }
 
-    private void dummyData() {
-//        houseArrayList.add(new House(43.651070, -79.347015, "Toronto", 1000.0));
-//        houseArrayList.add(new House(43.6532, -79.3832, "The PATH - City Hall, Toronto", 2000.0));
-//        houseArrayList.add(new House(43.8417, -79.4766, "Pleasant Ridge Ave, Thornhill, ON L4J 0G2", 400.0));
-//        houseArrayList.add(new House(44.0849, -79.0920, "Foxfire Chase, Uxbridge, ON L9P 1R4,", 4000.0));
-//        houseArrayList.add(new House(44.1046, -79.3942, "East Gwillimbury, ON,", 50.0));
-//        houseArrayList.add(new House(43.6619, -79.3748, "Horticultural Ave, Toronto, ON M5A 2P2, Canada", 200.0));
-//        houseArrayList.add(new House(43.6425, -79.3872, "Front St W, Toronto, ON M5V 2T6, Canada", 10.0));
-//        houseArrayList.add(new House(43.6328, -79.4257, "Dufferin St, Toronto, ON M6K 3C3, Canada", 100.0));
-//        houseArrayList.add(new House(43.6845, -79.3649, "Young Welcome Centre, Toronto", 6000.0));
-//        houseArrayList.add(new House(43.6559, -79.4104, "Palmerston Ave, Toronto, ON M6G 2P7, Canada", 71000.0));
-//        houseArrayList.add(new House(43.6696, -79.4464, "St Clarens Ave, Toronto, ON M6H 3X6, Canada", 11000.0));
-//        houseArrayList.add(new House(43.6440, -79.4428, "Sorauren Ave, Toronto, ON M6R 2E5, Canada", 13000.0));
-//        houseArrayList.add(new House(43.6423, -79.4030, "Wellington St W Second Floor", 100000.0));
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("houses")
-                .whereEqualTo("type", searchType)
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        mMap = googleMap;
+        placesApiRequest(googleMap);
+
+        //Places API key
+        apiKey = getResources().getString(R.string.google_maps_key_for_requests);
+
+        googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(@NonNull Marker marker) {
+                String place_id = marker.getTag().toString();
+                String placesAPICallUrl = detailsUrl + place_id + "&key=" + apiKey;
+
+                JsonObjectRequest placeDetailObjectRequest = new JsonObjectRequest(Request.Method.GET, placesAPICallUrl, null, new Response.Listener<JSONObject>(){
                     @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d("Firestore", document.getId() + " => " + document.getData());
-                                GeoPoint geoPoint = document.getGeoPoint("geopoint");
-                                houseArrayList.add(new House(geoPoint.getLatitude(), geoPoint.getLongitude(), document.getString("name"), document.getDouble("price")));
-                            }
-                            loadMarkers(houseArrayList, true);
-                        } else {
-                            Log.d("Firestore", "Error getting documents: ", task.getException());
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONObject result = response.getJSONObject("result");
+                            String name = result.getString("name");
+                            String formatted_address = result.getString("formatted_address");
+                            String international_phone_number = result.getString("international_phone_number");
+                            String website = result.getString("website");
+
+                            setDetails = name + "\n\n" +
+                                    formatted_address + "\n\n" +
+                                    international_phone_number + "\n\n" +
+                                    website;
+
+                            // Linkify the message
+                            final SpannableString s = new SpannableString(setDetails); // msg should have url to enable clicking
+                            Linkify.addLinks(s, Linkify.ALL);
+
+                            final AlertDialog d = new AlertDialog.Builder(ByNeighbourhoodActivity.this)
+                                    .setTitle("Restaurant Info")
+                                    .setPositiveButton(android.R.string.ok, null)
+                                    .setIcon(R.drawable.ic_baseline_food_24_black)
+                                    .setMessage( s )
+                                    .create();
+
+                            d.show();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
                     }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(ByNeighbourhoodActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+                    }
                 });
+                Volley.newRequestQueue(ByNeighbourhoodActivity.this).add(placeDetailObjectRequest);
+
+                return false;
+            }
+        });
+    }
+
+    private void placesApiRequest(GoogleMap googleMap) {
+        removeMarkers();
+
+        //Places API key
+        apiKey = getResources().getString(R.string.google_maps_key_for_requests);
+        //Prepare request urls with required parameters
+        nearbyUrl="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.64253900503797,-79.38720700569782&radius=1500000&type=" + searchType + "&sensor=true&key=" + apiKey;
+
+        // Request JSON data from the provided URL and display response
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, nearbyUrl, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    LatLng latLng = new LatLng(0, 0);
+                    JSONArray results=response.getJSONArray("results");
+                    for(int i = 0; i < results.length(); i++){
+                        JSONObject locations = results.getJSONObject(i);
+                        String place_id = locations.getString("place_id");
+                        String name = locations.getString("name");
+                        String vicinity = locations.getString("vicinity");
+
+                        //Getting latitude & longitude
+                        JSONObject geometry = locations.getJSONObject("geometry");
+                        JSONObject location = geometry.getJSONObject("location");
+                        float lat = (float) location.getDouble("lat");
+                        float lng = (float) location.getDouble("lng");
+
+                        latLng = new LatLng(lat, lng);
+
+                        //Add markers to map
+                        Marker marker = googleMap.addMarker(new MarkerOptions()
+                                .position(latLng)
+                                .title(name)
+                                .snippet(vicinity));
+                        marker.setTag(place_id);
+                        markerArrayList.add(marker);
+                    }
+                    googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12.0f));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(ByNeighbourhoodActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+        //Add request to a new request queue
+        Volley.newRequestQueue(ByNeighbourhoodActivity.this).add(jsonObjectRequest);
     }
 
     private void closeKeyboard() {
@@ -169,51 +199,6 @@ public class ByNeighbourhoodActivity extends AppCompatActivity implements OnMapR
         if (view != null) {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }
-
-    @Override
-    public void onMapReady(@NonNull GoogleMap googleMap) {
-        mMap = googleMap;
-    }
-
-    public void loadMarkers(ArrayList<House> houses, boolean isAll) {
-        removeMarkers();
-
-        if (houses.isEmpty()) {
-            Toast.makeText(ByNeighbourhoodActivity.this, "No Houses Found", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        for (int i = 0; i < houses.size(); i++) {
-            LatLng latLng = new LatLng(houses.get(i).getLatitude(), houses.get(i).getLongitude());
-
-            String sb = "Title: " + houses.get(i).getName() + "\n\n" +
-                    "Price: " + houses.get(i).getPrice()+"$";
-            Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).title(sb));
-            markerArrayList.add(marker);
-
-
-            mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-                @Override
-                public boolean onMarkerClick(@NonNull Marker marker) {
-                    new AlertDialog.Builder(ByNeighbourhoodActivity.this)
-                            .setTitle("Info")
-                            .setMessage(marker.getTitle())
-
-                            .setNegativeButton("Close", null)
-                            .show();
-                    //Toast.makeText(HousingActivity3.this, marker.getTitle(), Toast.LENGTH_SHORT).show();
-                    return false;
-                }
-            });
-            if (isAll) {
-                if (i == houses.size() - 1) {
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12.0f));
-                }
-            } else {
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12.0f));
-            }
         }
     }
 
@@ -274,7 +259,6 @@ public class ByNeighbourhoodActivity extends AppCompatActivity implements OnMapR
         if (item.getItemId() == android.R.id.home) {
             finish();
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

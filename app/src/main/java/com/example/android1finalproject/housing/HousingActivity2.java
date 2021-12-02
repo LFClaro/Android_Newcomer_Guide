@@ -5,13 +5,18 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android1finalproject.R;
+import com.example.android1finalproject.main.custom.CustomMenu;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HousingActivity2 extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    private CustomMenu customMenu;
 
     TextView titleTV, descriptionTV, toolbar_title;
     Button lawsBtn, byLocationBtn, byPriceBtn;
@@ -20,19 +25,26 @@ public class HousingActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_housing2);
+        ImageView toolbar_menu = findViewById(R.id.toolbar_menu);
+        TextView toolbar_title = findViewById(R.id.toolbar_title);
 
-        toolbar_title = findViewById(R.id.toolbar_title);
+        mAuth = FirebaseAuth.getInstance();
+        customMenu = new CustomMenu();
+
         toolbar_title.setText("Housing");
+
+        toolbar_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                customMenu.showMenu(HousingActivity2.this, v, mAuth);
+            }
+        });
 
         titleTV = findViewById(R.id.title_text);
         descriptionTV = findViewById(R.id.description);
         lawsBtn = findViewById(R.id.rules_btn);
         byPriceBtn = findViewById(R.id.by_price);
         byLocationBtn = findViewById(R.id.by_location);
-
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setTitle("Housing");
 
         Intent intent = getIntent();
         String index = intent.getStringExtra("index");

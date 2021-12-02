@@ -1,4 +1,4 @@
-package com.example.android1finalproject.main;
+package com.example.android1finalproject.main.custom;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,6 +13,7 @@ import com.example.android1finalproject.community.CommunityActivity;
 import com.example.android1finalproject.food.FoodActivity;
 import com.example.android1finalproject.health.HealthActivity;
 import com.example.android1finalproject.housing.HousingActivity;
+import com.example.android1finalproject.main.Login;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
