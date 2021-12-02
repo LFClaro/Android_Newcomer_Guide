@@ -37,7 +37,6 @@
             android:name=".food.FoodActivity"
             android:exported="true"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
->>>>>>> main
         <activity
             android:name=".community.CommunityActivity"
             android:exported="true"
