@@ -38,10 +38,10 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="HealthLabel">HEALTH</string>
-    <string name="HealthFindHospitalLabel">HEALTH-Find Hospital</string>
+    <string name="HealthFindHospitalLabel">Find Hospital</string>
     <string name="generalInformation">General Information</string>
     <string name="hospital">Hospital</string>
-    <string name="healthCenter">Health Center</string>
+    <string name="healthCenter">Health Facilities</string>
     <string name="emergency">Emergency</string>
     <string name="ohip">OHIP</string>
     <string name="familyDoctor">Family Doctor</string>
@@ -65,7 +65,7 @@ Important note: You can apply as soon as you have the documents that you need. H
 
     for more information <a href="https://settlement.org/ontario/health/#OHIP">Click Me</a></string>
 
-    <string name="SearchOntarioHospital">Enter to Find Hospital</string>
+    <string name="SearchOntarioHospital">Enter Hospital Name</string>
 
     <string name="auth_failed">Authentication failed</string>
     <string name="signed_in">Signed In</string>
