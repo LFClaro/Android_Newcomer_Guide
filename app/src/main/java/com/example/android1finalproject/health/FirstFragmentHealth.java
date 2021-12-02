@@ -12,9 +12,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.databinding.FragmentFirstHealthBinding;
-import com.example.android1finalproject.housing.HousingActivity;
 import com.example.android1finalproject.main.HomeActivity;
-import com.example.android1finalproject.main.MainActivity;
 
 public class FirstFragmentHealth extends Fragment {
 

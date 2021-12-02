@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.housing.HousingActivity;
-import com.example.android1finalproject.main.CustomMenu;
+import com.example.android1finalproject.main.custom.CustomMenu;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class GovtServicesActivity extends AppCompatActivity {
@@ -30,6 +30,9 @@ public class GovtServicesActivity extends AppCompatActivity {
         customMenu = new CustomMenu();
 
         ImageView toolbar_menu = findViewById(R.id.toolbar_menu);
+        TextView toolbar_title = findViewById(R.id.toolbar_title);
+
+        toolbar_title.setText("Govt. Services");
 
         Button healthCard = findViewById(R.id.health_card_btn);
         Button SIN = findViewById(R.id.SIN_btn);

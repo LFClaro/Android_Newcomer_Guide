@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.govtServices.Data.DataAccess;
 import com.example.android1finalproject.govtServices.Data.ServiceDetailsModel;
-import com.example.android1finalproject.main.CustomMenu;
+import com.example.android1finalproject.main.custom.CustomMenu;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class TransitionActivity extends AppCompatActivity {
@@ -44,6 +44,8 @@ public class TransitionActivity extends AppCompatActivity {
         textView_Service = findViewById(R.id.textView_Service);
         textView_Location = findViewById(R.id.textView_Location);
 
+        toolbar_title.setText("");
+
         toolbar_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +73,7 @@ public class TransitionActivity extends AppCompatActivity {
     }
 
     private void populateUI(ServiceDetailsModel details) {
+        toolbar_title.setText(details.getServiceName().replace(" Application", ""));
         textView_Service.setText(details.getServiceName());
         ArrayAdapter<String> adapter = new ArrayAdapter<>(TransitionActivity.this, R.layout.activity_govtservices_listview, details.getDocuments());
         listView.setAdapter(adapter);

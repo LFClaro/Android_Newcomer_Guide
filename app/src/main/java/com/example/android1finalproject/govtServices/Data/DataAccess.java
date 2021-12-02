@@ -17,7 +17,8 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 public class DataAccess {
-    private DataAccess() { }
+    private DataAccess() {
+    }
 
     private static DataAccess singleInstance = null;
 
@@ -60,7 +61,5 @@ public class DataAccess {
                         }
                     }
                 });
-
-
     }
 }
