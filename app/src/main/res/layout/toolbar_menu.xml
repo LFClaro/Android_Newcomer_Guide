@@ -37,5 +37,4 @@
             android:layout_centerVertical="true"
             android:src="@drawable/ic_mapleleaf_40" />
     </RelativeLayout>
-
 </RelativeLayout>

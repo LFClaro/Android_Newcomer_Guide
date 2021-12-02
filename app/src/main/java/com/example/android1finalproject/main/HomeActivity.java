@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android1finalproject.govtServices.GovtServicesActivity;
 import com.example.android1finalproject.food.FoodActivity;
 import com.example.android1finalproject.health.HealthActivity;
 import com.example.android1finalproject.R;
@@ -83,7 +84,8 @@ public class HomeActivity extends AppCompatActivity {
         govtButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(HomeActivity.this, "TODO Government Menu goes here", Toast.LENGTH_SHORT).show();
+                Intent govtServicesMain = new Intent(HomeActivity.this, GovtServicesActivity.class );
+                startActivity(govtServicesMain);
             }
         });
     }
