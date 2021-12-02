@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".community.SecondFragmentCommunity">
+    tools:context=".community.schoolFragment">
 
     <include
         android:id="@+id/cmtoolbar"
@@ -37,11 +37,11 @@
             tools:ignore="RtlSymmetry" />
 
         <Button
-            android:id="@+id/secondFindBTN"
+            android:id="@+id/schoolFindBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:text="@string/communityfind"
+            android:text="@string/Find"
             android:textAllCaps="false" />
 
 

@@ -2,27 +2,106 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph_community"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/FirstFragmentCommunity">
 
     <fragment
         android:id="@+id/FirstFragmentCommunity"
         android:name="com.example.android1finalproject.community.FirstFragmentCommunity"
-        android:label="@string/first_fragment_label"
+
         tools:layout="@layout/fragment_first_community">
 
         <action
             android:id="@+id/action_FirstFragmentCommunity_to_SecondFragmentCommunity"
             app:destination="@id/SecondFragmentCommunity" />
+
+        <action
+            android:id="@+id/action_FirstFragmentCommunity_to_placeofinterestFragment"
+            app:destination="@id/community_placeofinterestFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragmentCommunity_to_schoolFragment"
+            app:destination="@id/schoolFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragmentCommunity_to_servicesFragment"
+            app:destination="@id/servicesFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragmentCommunity_to_communitycentersMap"
+            app:destination="@id/communitycentersMap" />
+
+        <action
+            android:id="@+id/action_FirstFragmentCommunity_to_placeofinterestMapFragment"
+            app:destination="@id/placeofinterestMap" />
+
+        <action
+            android:id="@+id/action_FirstFragmentCommunity_to_MainActivity"
+            />
     </fragment>
     <fragment
         android:id="@+id/SecondFragmentCommunity"
         android:name="com.example.android1finalproject.community.SecondFragmentCommunity"
-        android:label="@string/second_fragment_label"
+
         tools:layout="@layout/fragment_second_community">
 
+
         <action
-            android:id="@+id/action_SecondFragmentCommunity_to_FirstFragmentCommunity"
-            app:destination="@id/FirstFragmentCommunity" />
+            android:id="@+id/action_SecondFragmentCommunity_to_communitycentersMap"
+            app:destination="@id/communitycentersMap" />
+    </fragment>
+    <fragment
+        android:id="@+id/community_placeofinterestFragment"
+        android:name="com.example.android1finalproject.community.community_placeofinterestFragment"
+        android:label="@string/places_of_interest"
+        tools:layout="@layout/fragment_community_placeofinterest">
+
+        <action
+            android:id="@+id/action_placeofinterestFragment_to_placeofinterestMapFragment"
+            app:destination="@id/placeofinterestMap" />
+
+        <action
+            android:id="@+id/action_FirstFragmentCommunity_to_placeofinterestFragment"
+            app:destination="@id/community_placeofinterestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolFragment"
+        android:name="com.example.android1finalproject.community.schoolFragment"
+        android:label="@string/school_and_libraries"
+        tools:layout="@layout/fragment_school">
+
+        <action
+            android:id="@+id/action_SecondFragmentCommunity_to_schoolFragment"
+            app:destination="@id/schoolFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.example.android1finalproject.community.servicesFragment"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_school">
+
+        <action
+            android:id="@+id/action_SecondFragmentCommunity_to_servicesFragment"
+            app:destination="@id/servicesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communitycentersMap"
+        android:name="com.example.android1finalproject.community.communitycentersMap"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_communitycenters_map">
+
+        <action
+            android:id="@+id/action_SecondFragmentCommunity_to_communitycentersMap"
+            app:destination="@id/communitycentersMap" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeofinterestMap"
+        android:name="com.example.android1finalproject.community.communitycentersMap"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_placeofinterest_map">
+
+        <action
+            android:id="@+id/action_SecondFragmentCommunity_to_communitycentersMap"
+            app:destination="@id/communitycentersMap" />
     </fragment>
 </navigation>

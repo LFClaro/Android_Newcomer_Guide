@@ -37,6 +37,30 @@ public class FirstFragmentCommunity extends Fragment {
                         .navigate(R.id.action_FirstFragmentCommunity_to_SecondFragmentCommunity);
             }
         });
+
+        binding.piBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragmentCommunity.this)
+                        .navigate(R.id.action_FirstFragmentCommunity_to_placeofinterestFragment);
+            }
+        });
+
+        binding.slBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragmentCommunity.this)
+                        .navigate(R.id.action_FirstFragmentCommunity_to_schoolFragment);
+            }
+        });
+
+        binding.sBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragmentCommunity.this)
+                        .navigate(R.id.action_FirstFragmentCommunity_to_servicesFragment);
+            }
+        });
     }
 
     @Override

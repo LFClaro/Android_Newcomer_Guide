@@ -134,12 +134,18 @@ string in this file.
     <string name="cc_read_moreBTN">Find</string>
     <string name="overview_community">A new life in Canada can be an overwhelming experience. You can participate in community activities to help meet people and settle in better. Learn about hotspot to visit and activities to do.</string>
     <string name="pi_read_moreBTN">Read More...</string>
+    <string name="tourism_message">EXPLORE CANADA</string>
+    <string name="touristinfo"><a href="https://www.destinationontario.com/en-ca">Discover Ontario</a> - This website invites newcomers to learn more about their new home. It has information about arts and culture, history, tourism, geography, fun facts and more.
+        Find areas near you.</string>
+    <string name="communityfind">FIND</string>
+    <string name="searchbutton">FIND</string>
     <string name="school_info">Public libraries are a free and valuable resource for newcomers. Learn about libraries and your adult education options in Canada.</string>
     <string name="sl_read_moreBTN">Read More...</string>
     <string name="services">Services</string>
     <string name="services_info">Find out services such as transportation, religious places of worship, banks etc, that are around you. You have many things to do.</string>
     <string name="s_read_moreBTN">Read More...</string>
     <string name="locationBTN">Find Community Centers Around Me</string>
+    <string name="community_toolbar">Community</string>
     <string name="sign_out">Sign Out</string>
     <string name="by_country">by Country</string>
     <string name="by_neighbourhood">by Neighbourhood</string>

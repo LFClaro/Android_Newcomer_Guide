@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -13,9 +14,10 @@ import com.example.android1finalproject.R;
 import com.example.android1finalproject.databinding.FragmentSecondHealthBinding;
 
 
-public class SecondFragmentHealth extends Fragment {
+public class  SecondFragmentHealth extends Fragment {
 
     private FragmentSecondHealthBinding binding;
+
 
     @Override
     public View onCreateView(
@@ -25,6 +27,8 @@ public class SecondFragmentHealth extends Fragment {
 
         binding = FragmentSecondHealthBinding.inflate(inflater, container, false);
         return binding.getRoot();
+
+
 
     }
 
