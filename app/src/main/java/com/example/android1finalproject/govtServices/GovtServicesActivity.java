@@ -30,8 +30,6 @@ public class GovtServicesActivity extends AppCompatActivity {
         customMenu = new CustomMenu();
 
         ImageView toolbar_menu = findViewById(R.id.toolbar_menu);
-        ImageView toolbar_logo = findViewById(R.id.toolbar_logo);
-        TextView toolbar_title = findViewById(R.id.toolbar_title);
 
         Button healthCard = findViewById(R.id.health_card_btn);
         Button SIN = findViewById(R.id.SIN_btn);
@@ -42,7 +40,7 @@ public class GovtServicesActivity extends AppCompatActivity {
 
         toolbar_menu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v) {
+            public void onClick(View v) {
                 customMenu.showMenu(GovtServicesActivity.this, v, mAuth);
             }
         });
@@ -66,7 +64,7 @@ public class GovtServicesActivity extends AppCompatActivity {
         photo_ID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 service = "photo_ID";
+                service = "photo_ID";
                 transition(v);
             }
         });
@@ -95,36 +93,7 @@ public class GovtServicesActivity extends AppCompatActivity {
             }
         });
 
-       /* toolbar_menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View v) {
-                showMenu(v);
-            }
-        });*/
     }
-
-   /* private void showMenu(View v){
-        PopupMenu popupMenu = new PopupMenu(GovtServicesActivity.this, v);
-        popupMenu.getMenuInflater().inflate(R.menu.popup_menu,popupMenu.getMenu());
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem menuItem) {
-                if(menuItem.getItemId() == R.id.community_menu)
-                    Toast.makeText(GovtServicesActivity.this, "TODO Community Menu goes here", Toast.LENGTH_SHORT).show();
-                if(menuItem.getItemId() == R.id.food_menu)
-                    Toast.makeText(GovtServicesActivity.this, "TODO Food Menu goes here", Toast.LENGTH_SHORT).show();
-                if(menuItem.getItemId() == R.id.health_menu)
-                    Toast.makeText(GovtServicesActivity.this, "TODO Health Menu goes here", Toast.LENGTH_SHORT).show();
-                if(menuItem.getItemId() == R.id.housing_menu)
-                    Toast.makeText(GovtServicesActivity.this, "TODO Housing Menu goes here", Toast.LENGTH_SHORT).show();;
-                if(menuItem.getItemId() == R.id.govt_menu)
-                    Toast.makeText(GovtServicesActivity.this, "TODO Government Menu goes here", Toast.LENGTH_SHORT).show();
-                return true;
-            }
-        });
-
-        popupMenu.show();*/
-   // }
 
     private void transition(View v) {
         Intent intent = new Intent(GovtServicesActivity.this, TransitionActivity.class);

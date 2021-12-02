@@ -27,6 +27,7 @@ public class TransitionActivity extends AppCompatActivity {
     TextView textView_Location;
     private FirebaseAuth mAuth;
     private CustomMenu customMenu;
+    String serviceCenter ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +60,9 @@ public class TransitionActivity extends AppCompatActivity {
         btn_searchLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=Service Ontario");
+                //Emulator only --> we need to set the emulator location manually,
+                //else, the emulator will take the San Franciso location by default.
+                Uri gmmIntentUri = Uri.parse(String.format("geo:0,0?q=%s", serviceCenter));
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -71,6 +74,7 @@ public class TransitionActivity extends AppCompatActivity {
         textView_Service.setText(details.getServiceName());
         ArrayAdapter<String> adapter = new ArrayAdapter<>(TransitionActivity.this, R.layout.activity_govtservices_listview, details.getDocuments());
         listView.setAdapter(adapter);
-        textView_Location.setText(details.getServiceCenter());
+        serviceCenter = details.getServiceCenter();
+        textView_Location.setText(serviceCenter);
     }
 }

@@ -6,43 +6,18 @@ import androidx.annotation.NonNull;
 
 import com.example.android1finalproject.housing.models.House;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.GeoPoint;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
 public class DataAccess {
-    String jsonString = "{\n" +
-            "\t\"healthCard\": {\n" +
-            "\t\t\"name\": \"Health Card Application\",\n" +
-            "\t\t\"documents\": [\n" +
-            "\t\t\t\"Proof of Canadian status\",\n" +
-            "\t\t\t\"Proof of residency in Ontario\",\n" +
-            "\t\t\t\"Proof of identity\"\n" +
-            "\t\t],\n" +
-            "\t\t\"serviceCenter\": \"Service Ontario\"\n" +
-            "\t}\n" +
-            "}";
-
-    /* JSONObject jsonObject;*/
-    private DataAccess() {
-        //  jsonObject = new JSONObject(jsonString);
-    }
+    private DataAccess() { }
 
     private static DataAccess singleInstance = null;
 
@@ -53,6 +28,7 @@ public class DataAccess {
         return singleInstance;
     }
 
+    //Creating the ServiceDetailsModel object with the data from the database
     private ServiceDetailsModel createDetailsModel(Map<String, Object> map) {
         ServiceDetailsModel serviceDetailsModel = new ServiceDetailsModel();
         serviceDetailsModel.setServiceCenter(map.get("serviceCenter").toString());
@@ -62,7 +38,7 @@ public class DataAccess {
         return serviceDetailsModel;
     }
 
-
+    //fetching Government Service data from database
     public void fetchServiceDetails(String serviceId, Consumer<ServiceDetailsModel> consumer) {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
