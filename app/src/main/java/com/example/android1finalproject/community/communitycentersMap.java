@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +18,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.android1finalproject.R;
-import com.example.android1finalproject.databinding.FragmentServicesBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -33,7 +31,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class servicesFragment extends Fragment {
+public class communitycentersMap extends Fragment {
+
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -59,7 +58,7 @@ public class servicesFragment extends Fragment {
     private void placesApiRequest(GoogleMap googleMap) {
         //Places API key
         String apiKey = getResources().getString(R.string.google_maps_key_for_requests);;
-        String searchType = "church";
+        String searchType = getArguments().getString("searchquery");
 
         //Prepare request urls with required parameters
         String nearbyUrl="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.64253900503797,-79.38720700569782&radius=1500000&type=" + searchType + "&sensor=true&key=" + apiKey;
@@ -95,7 +94,7 @@ public class servicesFragment extends Fragment {
                         @Override
                         public boolean onMarkerClick(@NonNull Marker marker) {
                             new AlertDialog.Builder(getActivity())
-                                    .setTitle("Services")
+                                    .setTitle("Community Center")
                                     .setMessage(marker.getTitle())
 
                                     .setNegativeButton("Close", null)

@@ -50,7 +50,15 @@ public class FirstFragmentCommunity extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragmentCommunity.this)
-                        .navigate(R.id.action_FirstFragmentCommunity_to_placeofinterestFragment);
+                        .navigate(R.id.action_FirstFragmentCommunity_to_schoolFragment);
+            }
+        });
+
+        binding.sBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragmentCommunity.this)
+                        .navigate(R.id.action_FirstFragmentCommunity_to_servicesFragment);
             }
         });
     }
