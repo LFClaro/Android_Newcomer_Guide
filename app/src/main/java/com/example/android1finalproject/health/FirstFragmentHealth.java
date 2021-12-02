@@ -34,7 +34,7 @@ public class FirstFragmentHealth extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //firstButton was there before PUT as REMINDER
+        //general button
         binding.generalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,8 +72,7 @@ public class FirstFragmentHealth extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), HomeActivity.class);
                 startActivity(intent);
-             //  NavHostFragment.findNavController(FirstFragmentHealth.this)
-             //           .navigate(R.id.action_FirstFragmentHealth_to_MainActivity);
+
             }
 
 

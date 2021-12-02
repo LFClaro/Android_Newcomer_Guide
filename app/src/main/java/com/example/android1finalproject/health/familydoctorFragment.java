@@ -15,7 +15,7 @@ import com.example.android1finalproject.R;
 import com.example.android1finalproject.databinding.FragmentFamilyDoctorBinding;
 
 
-
+//family doctor class
 public class familydoctorFragment extends Fragment {
 
     private FragmentFamilyDoctorBinding binding;

@@ -49,9 +49,7 @@ public class HealthMapsFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-//            LatLng sydney = new LatLng(-34, 151);
-//            googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-//            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 12.0f));
+//
             placesApiRequest(googleMap);
 
         }
@@ -116,17 +114,7 @@ public class HealthMapsFragment extends Fragment {
         }
 
         );
-//        To add a request header, use getHeaders() anonymous method
-//        {@Override
-//        public Map<String, String> getHeaders() throws AuthFailureError {
-//            Map<String, String> headers = new HashMap<>();
-//            headers.put("Authorization", "Bearer " + "the-key-abcd-1234-dfksdfjjklkjl-jslkcn-asceoi");
-//            return headers;
-//        }
-//        }
-                 //JsonObjectRequest
-
-        //Add request to a new request queue
+//
         Volley.newRequestQueue(getActivity()).add(jsonObjectRequest);
     }
 
