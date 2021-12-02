@@ -32,13 +32,11 @@ public class SecondFragmentCommunity extends Fragment {
 
 
 
-        binding.schoolBTN.setOnClickListener(new View.OnClickListener() {
+        binding.secondFindBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                bundle.putString("searchquery",binding.input.getText().toString());
                 NavHostFragment.findNavController(SecondFragmentCommunity.this)
-                        .navigate(R.id.action_SecondFragmentCommunity_to_FirstFragmentCommunity,bundle);
+                        .navigate(R.id.action_SecondFragmentCommunity_to_communitycentersMap);
             }
         });
     }

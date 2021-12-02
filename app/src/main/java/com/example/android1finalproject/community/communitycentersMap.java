@@ -58,7 +58,7 @@ public class communitycentersMap extends Fragment {
     private void placesApiRequest(GoogleMap googleMap) {
         //Places API key
         String apiKey = getResources().getString(R.string.google_maps_key_for_requests);;
-        String searchType = getArguments().getString("searchquery");
+        String searchType = "community";
 
         //Prepare request urls with required parameters
         String nearbyUrl="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.64253900503797,-79.38720700569782&radius=1500000&type=" + searchType + "&sensor=true&key=" + apiKey;

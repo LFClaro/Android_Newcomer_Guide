@@ -18,51 +18,53 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:src="@drawable/tourism"
-        app:layout_constraintBottom_toTopOf="@+id/tourismlbl"
+
         app:layout_constraintTop_toBottomOf="@+id/cmtoolbar" />
 
-    <TextView
-        android:id="@+id/tourismlbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tourism_message"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tourismimg"
-        app:layout_constraintVertical_bias="0.362" />
+            <TextView
+                android:id="@+id/tourismlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tourism_message"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tourismimg"
+                app:layout_constraintVertical_bias="0.362" />
 
-    <TextView
-        android:id="@+id/info"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/touristinfo"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tourismlbl" />
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/touristinfo"
+                app:layout_constraintBottom_toTopOf="@id/button_second"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tourismlbl" />
 
 
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="50dp"
-        android:text="@string/searchbutton"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/info" />
+            <Button
+                android:id="@+id/button_second"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="50dp"
+                android:text="@string/searchbutton"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

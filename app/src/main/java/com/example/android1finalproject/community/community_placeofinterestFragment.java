@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.databinding.FragmentCommunityPlaceofinterestBinding;
-import com.example.android1finalproject.databinding.FragmentSecondCommunityBinding;
+
 
 
 public class community_placeofinterestFragment extends Fragment {
@@ -36,7 +36,7 @@ public class community_placeofinterestFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(community_placeofinterestFragment.this)
-                        .navigate(R.id.action_SecondFragmentCommunity_to_FirstFragmentCommunity);
+                        .navigate(R.id.action_placeofinterestFragment_to_placeofinterestMapFragment);
             }
         });
     }

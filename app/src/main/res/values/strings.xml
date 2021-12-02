@@ -137,6 +137,7 @@ string in this file.
     <string name="tourism_message">EXPLORE CANADA</string>
     <string name="touristinfo"><a href="https://www.destinationontario.com/en-ca">Discover Ontario</a> - This website invites newcomers to learn more about their new home. It has information about arts and culture, history, tourism, geography, fun facts and more.
         Find areas near you.</string>
+    <string name="communityfind">FIND</string>
     <string name="searchbutton">FIND</string>
     <string name="school_info">Public libraries are a free and valuable resource for newcomers. Learn about libraries and your adult education options in Canada.</string>
     <string name="sl_read_moreBTN">Read More...</string>

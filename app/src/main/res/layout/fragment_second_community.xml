@@ -37,11 +37,11 @@
             tools:ignore="RtlSymmetry" />
 
         <Button
-            android:id="@+id/schoolBTN"
+            android:id="@+id/secondFindBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:text="@string/Find"
+            android:text="@string/communityfind"
             android:textAllCaps="false" />
 
 
