@@ -10,8 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android1finalproject.R;
-import com.example.android1finalproject.main.CustomMenu;
-import com.example.android1finalproject.main.HomeActivity;
+import com.example.android1finalproject.main.custom.CustomMenu;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HousingActivity extends AppCompatActivity {
