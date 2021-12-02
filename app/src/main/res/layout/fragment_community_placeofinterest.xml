@@ -9,8 +9,8 @@
     tools:context=".community.community_placeofinterestFragment">
 
     <include
-        android:id="@+id/cmtoolbar"
-        layout="@layout/community_toolbar" />
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_menu" />
 
     <ImageView
         android:id="@+id/tourismimg"
@@ -19,7 +19,7 @@
         android:layout_marginBottom="20dp"
         android:src="@drawable/tourism"
 
-        app:layout_constraintTop_toBottomOf="@+id/cmtoolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
             <TextView
                 android:id="@+id/tourismlbl"

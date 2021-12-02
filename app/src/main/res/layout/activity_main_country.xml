@@ -48,9 +48,8 @@
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
                     android:text="@string/brazilian"
+                    android:padding="4dp"
                     android:textAllCaps="false" />
 
                 <Button

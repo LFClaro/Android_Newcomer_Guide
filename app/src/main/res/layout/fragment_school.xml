@@ -8,10 +8,6 @@
     android:orientation="vertical"
     tools:context=".community.schoolFragment">
 
-    <include
-        android:id="@+id/cmtoolbar"
-        layout="@layout/community_toolbar" />
-
     <LinearLayout
         android:id="@+id/searchBar"
         android:layout_width="wrap_content"

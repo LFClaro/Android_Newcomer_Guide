@@ -26,6 +26,10 @@
             android:theme="@style/Theme.Android1FinalProject.NoActionBar"
             />
         <activity
+            android:name=".food.FoodMapActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+        <activity
             android:name=".food.ByNeighbourhoodActivity"
             android:exported="true"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
@@ -41,7 +45,11 @@
             android:name=".community.CommunityActivity"
             android:exported="true"
             android:label="@string/title_activity_community"
-            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.HomeActivity" />
+        </activity>
         <activity
             android:name=".health.HealthActivity"
             android:exported="true"

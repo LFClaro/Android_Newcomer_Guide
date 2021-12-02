@@ -1,6 +1,7 @@
 package com.example.android1finalproject.food;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,32 +54,29 @@ public class FoodActivity extends AppCompatActivity {
             }
         });
 
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
         neighborhoodBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(FoodActivity.this, ByNeighbourhoodActivity.class);
                 startActivity(intent);
-//                Map<String, Object> city = new HashMap<>();
-//                city.put("name", "Los Angeles");
-//                city.put("state", "CA");
-//                city.put("country", "USA");
-//
-//                db.collection("cities").document("LA")
-//                        .set(city)
-//                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-//                            @Override
-//                            public void onSuccess(Void aVoid) {
-//                                Log.d("TestFirebase", "DocumentSnapshot successfully written!");
-//                            }
-//                        })
-//                        .addOnFailureListener(new OnFailureListener() {
-//                            @Override
-//                            public void onFailure(@NonNull Exception e) {
-//                                Log.w("TestFirebase", "Error writing document", e);
-//                            }
-//                        });
+            }
+        });
+
+        farmersMarketsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mapIntent = new Intent(FoodActivity.this, FoodMapActivity.class);
+                mapIntent.putExtra("type","Farmer's Market");
+                startActivity(mapIntent);
+            }
+        });
+
+        groceryStoresBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mapIntent = new Intent(FoodActivity.this, FoodMapActivity.class);
+                mapIntent.putExtra("type","Grocery Stores");
+                startActivity(mapIntent);
             }
         });
     }

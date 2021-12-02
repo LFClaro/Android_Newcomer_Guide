@@ -6,67 +6,85 @@
     android:layout_height="match_parent"
     android:background="@drawable/app_background"
     tools:context=".main.HomeActivity">
-    <include layout="@layout/toolbar_menu" />
+    <include android:id="@+id/toolbar" layout="@layout/toolbar_menu" />
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/btnCommunity"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/community"
-            android:textSize="24sp"
-            android:padding="16dp"
-            android:textAllCaps="false" />
+            android:paddingVertical="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/btnFood"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/food"
-            android:textSize="24sp"
-            android:padding="16dp"
-            android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btnCommunity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/community"
+                android:textSize="24sp"
+                android:padding="16dp"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnFood"/>
 
-        <Button
-            android:id="@+id/btnHealth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/health"
-            android:textSize="24sp"
-            android:padding="16dp"
-            android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btnFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/food"
+                android:textSize="24sp"
+                android:padding="16dp"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toBottomOf="@id/btnCommunity"
+                app:layout_constraintBottom_toTopOf="@id/btnHealth"/>
 
-        <Button
-            android:id="@+id/btnHousing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/housing"
-            android:textSize="24sp"
-            android:padding="16dp"
-            android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btnHealth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/health"
+                android:textSize="24sp"
+                android:padding="16dp"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toBottomOf="@id/btnFood"
+                app:layout_constraintBottom_toTopOf="@id/btnHousing"/>
 
-        <Button
-            android:id="@+id/btnGovt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/government_services"
-            android:textSize="24sp"
-            android:padding="16dp"
-            android:textAllCaps="false" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnHousing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/housing"
+                android:textSize="24sp"
+                android:padding="16dp"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toBottomOf="@id/btnHealth"
+                app:layout_constraintBottom_toTopOf="@id/btnGovt"/>
+
+            <Button
+                android:id="@+id/btnGovt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/government_services"
+                android:textSize="24sp"
+                android:padding="16dp"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toBottomOf="@id/btnHousing"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
