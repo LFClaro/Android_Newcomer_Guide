@@ -80,19 +80,6 @@
             app:layout_constraintStart_toStartOf="@id/etPasswordLogin"
             app:layout_constraintEnd_toEndOf="@id/etPasswordLogin"
             app:layout_constraintTop_toBottomOf="@id/etPasswordLogin"
-            app:layout_constraintBottom_toTopOf="@id/forgot_label"/>
-
-        <TextView
-            android:id="@+id/forgot_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/forgot_your_account"
-            android:textSize="12sp"
-            android:textStyle="italic"
-            android:padding="5dp"
-            app:layout_constraintStart_toStartOf="@id/btnLogIn2"
-            app:layout_constraintEnd_toEndOf="@id/btnLogIn2"
-            app:layout_constraintTop_toBottomOf="@id/btnLogIn2"
             app:layout_constraintBottom_toTopOf="@id/btnCreateAccount2"/>
 
         <Button
@@ -105,7 +92,7 @@
             android:backgroundTint="@color/green"
             app:layout_constraintStart_toStartOf="@id/btnLogIn2"
             app:layout_constraintEnd_toEndOf="@id/btnLogIn2"
-            app:layout_constraintTop_toBottomOf="@id/forgot_label"
+            app:layout_constraintTop_toBottomOf="@id/btnLogIn2"
             app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

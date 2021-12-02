@@ -46,6 +46,7 @@ public class LogInActivity extends AppCompatActivity {
 
         logInButton.setOnClickListener(new View.OnClickListener() {
             String email, password;
+
             @Override
             public void onClick(View view) {
                 email = emailEditText.getText().toString();
@@ -76,6 +77,7 @@ public class LogInActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Toast.makeText(LogInActivity.this, "Authentication Successful", Toast.LENGTH_SHORT).show();
                             updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -89,12 +91,13 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser user) {
-        Toast.makeText(LogInActivity.this, "Authentication Successful", Toast.LENGTH_SHORT).show();
         reload();
     }
 
     private void reload() {
-        Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
-        startActivity(intent);
+        if (mAuth.getCurrentUser() != null) {
+            Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }
     }
 }

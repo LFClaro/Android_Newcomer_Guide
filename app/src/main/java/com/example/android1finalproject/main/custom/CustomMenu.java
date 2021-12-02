@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import com.example.android1finalproject.R;
 import com.example.android1finalproject.community.CommunityActivity;
@@ -14,7 +13,7 @@ import com.example.android1finalproject.food.FoodActivity;
 import com.example.android1finalproject.govtServices.GovtServicesActivity;
 import com.example.android1finalproject.health.HealthActivity;
 import com.example.android1finalproject.housing.HousingActivity;
-import com.example.android1finalproject.main.Login;
+import com.example.android1finalproject.main.helper.Login;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
