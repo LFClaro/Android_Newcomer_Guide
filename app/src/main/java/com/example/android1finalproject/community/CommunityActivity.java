@@ -36,9 +36,9 @@ public class CommunityActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("   Community");
-        getSupportActionBar().setLogo(R.drawable.ic_mapleleaf_40);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_community);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();

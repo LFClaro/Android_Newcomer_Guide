@@ -44,7 +44,7 @@
         <activity
             android:name=".community.CommunityActivity"
             android:exported="true"
-            android:label="@string/title_activity_community"
+            android:label="@string/community"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

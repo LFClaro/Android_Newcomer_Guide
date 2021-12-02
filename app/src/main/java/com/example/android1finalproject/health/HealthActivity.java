@@ -30,6 +30,10 @@ public class HealthActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main_health);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
