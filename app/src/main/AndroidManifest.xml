@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android1finalproject">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +25,19 @@
             android:exported="true"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar"
             />
+        <activity
+            android:name=".food.ByNeighbourhoodActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+        <activity
+            android:name=".food.ByCountryActivityMain"
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+        <activity
+            android:name=".food.FoodActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+>>>>>>> main
         <activity
             android:name=".community.CommunityActivity"
             android:exported="true"
@@ -50,11 +68,7 @@
             android:name=".main.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".main.HomeActivity"
@@ -64,11 +78,6 @@
             android:name=".main.LogInActivity"
             android:exported="false"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".main.CreateAccountActivity"
@@ -92,6 +101,4 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
     </application>
-
-
 </manifest>

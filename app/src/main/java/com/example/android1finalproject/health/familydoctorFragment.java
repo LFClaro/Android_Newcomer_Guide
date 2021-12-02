@@ -1,43 +1,43 @@
 package com.example.android1finalproject.health;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
+
 import com.example.android1finalproject.R;
-import com.example.android1finalproject.databinding.FragmentOhipBinding;
+import com.example.android1finalproject.databinding.FragmentFamilyDoctorBinding;
 
 
-public class ohipFragment extends Fragment {
+//family doctor class
+public class familydoctorFragment extends Fragment {
 
-    private FragmentOhipBinding binding;
+    private FragmentFamilyDoctorBinding binding;
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentOhipBinding.inflate(inflater, container, false);
+        binding = FragmentFamilyDoctorBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView t = (TextView) view.findViewById(R.id.ohipMessagelbl);
+        TextView t = (TextView) view.findViewById(R.id.familydoctormessagelbl);
         t.setMovementMethod(LinkMovementMethod.getInstance());
-        binding.ohipFind.setOnClickListener(new View.OnClickListener() {
+        binding.familydoctorback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(ohipFragment.this)
+                NavHostFragment.findNavController(familydoctorFragment.this)
                         .navigate(R.id.action_ohipFragment_to_FirstFragmentHealth);
             }
         });
