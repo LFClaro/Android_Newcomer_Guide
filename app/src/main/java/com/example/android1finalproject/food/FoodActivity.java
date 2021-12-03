@@ -11,9 +11,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android1finalproject.R;
+import com.example.android1finalproject.food.models.Coupon;
+import com.example.android1finalproject.housing.models.House;
 import com.example.android1finalproject.main.custom.CustomMenu;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
 
 public class FoodActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
