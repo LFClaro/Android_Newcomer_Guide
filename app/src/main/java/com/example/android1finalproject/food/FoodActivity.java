@@ -79,5 +79,13 @@ public class FoodActivity extends AppCompatActivity {
                 startActivity(mapIntent);
             }
         });
+
+        salesAndCouponsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FoodActivity.this, CouponsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

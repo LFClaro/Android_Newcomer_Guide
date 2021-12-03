@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +26,7 @@ public class LogInActivity extends AppCompatActivity {
     Button createButton, logInButton;
 
     private static final String TAG = "EmailPassword";
+
     // Declare Firebase Auth
     private FirebaseAuth mAuth;
 

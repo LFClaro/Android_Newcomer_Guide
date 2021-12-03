@@ -26,6 +26,10 @@
             android:theme="@style/Theme.Android1FinalProject.NoActionBar"
             />
         <activity
+            android:name=".food.CouponsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Android1FinalProject.NoActionBar" />
+        <activity
             android:name=".food.FoodMapActivity"
             android:exported="true"
             android:theme="@style/Theme.Android1FinalProject.NoActionBar" />

@@ -37,19 +37,21 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/govtImage"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/govtImage">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="30dp"
-            android:orientation="vertical"
             android:layout_marginVertical="10dp"
+            android:orientation="vertical"
             android:paddingBottom="20dp"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <Button
                 android:id="@+id/health_card_btn"
@@ -58,12 +60,12 @@
                 android:layout_marginTop="0dp"
                 android:onClick="applyClicked"
                 android:text="Apply for Health Card"
+                android:textAllCaps="false"
                 android:textSize="18sp"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/SIN_btn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textAllCaps="false"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteY="331dp" />
 
             <Button
@@ -72,13 +74,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="applyClicked"
                 android:text="Apply for SIN"
-                android:textSize="18sp"
                 android:textAllCaps="false"
-                app:layout_constraintTop_toBottomOf="@+id/health_card_btn"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@id/photo_ID_btn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/health_card_btn" />
 
             <Button
                 android:id="@+id/photo_ID_btn"
@@ -88,49 +89,49 @@
                 android:text="Apply for Photo ID"
                 android:textAllCaps="false"
                 android:textSize="18sp"
-                app:layout_constraintTop_toBottomOf="@id/SIN_btn"
                 app:layout_constraintBottom_toTopOf="@id/license_btn"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/SIN_btn" />
 
             <Button
                 android:id="@+id/license_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAllCaps="false"
                 android:onClick="applyClicked"
                 android:text="Apply for Driver's License"
+                android:textAllCaps="false"
                 android:textSize="18sp"
-                app:layout_constraintTop_toBottomOf="@id/photo_ID_btn"
                 app:layout_constraintBottom_toTopOf="@id/vehicle_registration_btn"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/photo_ID_btn" />
 
             <Button
                 android:id="@+id/vehicle_registration_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAllCaps="false"
                 android:onClick="applyClicked"
                 android:text="Vehicle Registration"
+                android:textAllCaps="false"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/license_btn"
                 app:layout_constraintBottom_toTopOf="@+id/furniture_rental_btn"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/license_btn" />
 
             <Button
                 android:id="@+id/furniture_rental_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAllCaps="false"
                 android:onClick="applyClicked"
                 android:text="Furniture Rental"
+                android:textAllCaps="false"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vehicle_registration_btn"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/vehicle_registration_btn" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
